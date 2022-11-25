@@ -1,0 +1,295 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "@id": "https://littlesunnykitchen.com/marry-me-chicken/#article",
+            "isPartOf": {
+                "@id": "https://littlesunnykitchen.com/marry-me-chicken/"
+            },
+            "author": {
+                "name": "Diana",
+                "@id": "https://littlesunnykitchen.com/#/schema/person/b3edd42c9baea6a2e9d68df549045c74"
+            },
+            "headline": "Marry Me Chicken",
+            "datePublished": "2020-06-05T00:00:00+00:00",
+            "dateModified": "2022-02-02T03:28:23+00:00",
+            "wordCount": 1447,
+            "commentCount": 449,
+            "publisher": {
+                "@id": "https://littlesunnykitchen.com/#organization"
+            },
+            "image": {
+                "@id": "https://littlesunnykitchen.com/marry-me-chicken/#primaryimage"
+            },
+            "thumbnailUrl": "https://littlesunnykitchen.com/wp-content/uploads/Marry-Me-Chicken-22.jpg",
+            "articleSection": [
+                "All Recipes",
+                "Chicken",
+                "Dinner",
+                "Stovetop",
+                "Valentine's Day"
+            ],
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "CommentAction",
+                    "name": "Comment",
+                    "target": [
+                        "https://littlesunnykitchen.com/marry-me-chicken/#respond"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://littlesunnykitchen.com/marry-me-chicken/",
+            "url": "https://littlesunnykitchen.com/marry-me-chicken/",
+            "name": "Marry Me Chicken - Little Sunny Kitchen",
+            "isPartOf": {
+                "@id": "https://littlesunnykitchen.com/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https://littlesunnykitchen.com/marry-me-chicken/#primaryimage"
+            },
+            "image": {
+                "@id": "https://littlesunnykitchen.com/marry-me-chicken/#primaryimage"
+            },
+            "thumbnailUrl": "https://littlesunnykitchen.com/wp-content/uploads/Marry-Me-Chicken-22.jpg",
+            "datePublished": "2020-06-05T00:00:00+00:00",
+            "dateModified": "2022-02-02T03:28:23+00:00",
+            "description": "Marry Me Chicken is creamy, juicy, and full of flavor! It's said that this chicken dinner is so good that if you cook it for your partner, he will propose to you!",
+            "breadcrumb": {
+                "@id": "https://littlesunnykitchen.com/marry-me-chicken/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "ReadAction",
+                    "target": [
+                        "https://littlesunnykitchen.com/marry-me-chicken/"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://littlesunnykitchen.com/marry-me-chicken/#primaryimage",
+            "url": "https://littlesunnykitchen.com/wp-content/uploads/Marry-Me-Chicken-22.jpg",
+            "contentUrl": "https://littlesunnykitchen.com/wp-content/uploads/Marry-Me-Chicken-22.jpg",
+            "width": 1200,
+            "height": 1800
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://littlesunnykitchen.com/marry-me-chicken/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://littlesunnykitchen.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "By Ingredient",
+                    "item": "https://littlesunnykitchen.com/category/ingredient/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Chicken",
+                    "item": "https://littlesunnykitchen.com/category/ingredient/chicken/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Marry Me Chicken"
+                }
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://littlesunnykitchen.com/#website",
+            "url": "https://littlesunnykitchen.com/",
+            "name": "Little Sunny Kitchen",
+            "description": "Delicious Recipes for Real Life",
+            "publisher": {
+                "@id": "https://littlesunnykitchen.com/#organization"
+            },
+            "potentialAction": [
+                {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://littlesunnykitchen.com/?s={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            ],
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://littlesunnykitchen.com/#organization",
+            "name": "Little Sunny Kitchen",
+            "url": "https://littlesunnykitchen.com/",
+            "sameAs": [
+                "https://www.instagram.com/littlesunnykitchen/",
+                "https://www.pinterest.com/lilsunnykitchen/",
+                "https://www.youtube.com/c/LittleSunnyKitchen",
+                "https://www.facebook.com/littlesunnykitchen/",
+                "https://twitter.com/lilsunnykitchen"
+            ],
+            "logo": {
+                "@type": "ImageObject",
+                "inLanguage": "en-US",
+                "@id": "https://littlesunnykitchen.com/#/schema/logo/image/",
+                "url": "",
+                "contentUrl": "",
+                "caption": "Little Sunny Kitchen"
+            },
+            "image": {
+                "@id": "https://littlesunnykitchen.com/#/schema/logo/image/"
+            }
+        },
+        {
+            "@type": "Person",
+            "@id": "https://littlesunnykitchen.com/#/schema/person/b3edd42c9baea6a2e9d68df549045c74",
+            "name": "Diana",
+            "sameAs": [
+                "https://littlesunnykitchen.com/about/"
+            ],
+            "url": "https://littlesunnykitchen.com/author/dianashakhanbehgmail-com/"
+        },
+        {
+            "@context": "http://schema.org/",
+            "@type": "Recipe",
+            "name": "Marry Me Chicken",
+            "author": {
+                "@type": "Person",
+                "name": "Diana"
+            },
+            "description": "Marry Me Chicken is creamy, juicy, and full of flavor! It&#039;s said that this chicken dinner is so good that if you cook it for your partner, he will propose to you! Yes, it&#039;s THAT amazing! Funny name, but probably the best chicken recipe ever!",
+            "datePublished": "2020-06-05T01:00:00+00:00",
+            "image": [
+                "https://littlesunnykitchen.com/wp-content/uploads/Marry-Me-Chicken-22.jpg",
+                "https://littlesunnykitchen.com/wp-content/uploads/Marry-Me-Chicken-22-500x500.jpg",
+                "https://littlesunnykitchen.com/wp-content/uploads/Marry-Me-Chicken-22-500x375.jpg",
+                "https://littlesunnykitchen.com/wp-content/uploads/Marry-Me-Chicken-22-480x270.jpg"
+            ],
+            "video": {
+                "name": "Marry Me Chicken",
+                "description": "Marry Me Chicken is creamy, juicy, and full of flavor! It's said that this chicken dinner is so good that if you make it for your partner, a marriage proposal will be his next question. This creamy chicken is also family-friendly, and definitely a crowd-pleaser! All you need to make this wonderful dish is just a few ingredients and half an hour from your time.",
+                "thumbnailUrl": "https://mediavine-res.cloudinary.com/image/upload/s--K9EPJCTQ--/c_limit,f_auto,fl_lossy,h_1080,q_auto,w_1920/v1591379652/ifv42pydnxh4fbccwczw.jpg",
+                "embedUrl": "https://video.mediavine.com/videos/d8znfhjroyhcivr3pcqr.js",
+                "contentUrl": "https://mediavine-res.cloudinary.com/video/upload/t_original/v1591379588/d8znfhjroyhcivr3pcqr.mp4",
+                "uploadDate": "2020-06-05T17:53:53+00:00",
+                "duration": "PT170S",
+                "@type": "VideoObject"
+            },
+            "recipeYield": [
+                "6",
+                "6 servings"
+            ],
+            "prepTime": "PT10M",
+            "cookTime": "PT15M",
+            "totalTime": "PT25M",
+            "recipeIngredient": [
+                "3 large boneless and skinless chicken breasts (sliced into thin cutlets)",
+                "½ teaspoon salt",
+                "¼ teaspoon ground black pepper",
+                "6 tablespoons all-purpose flour",
+                "2 tablespoons olive oil",
+                "2 tablespoons butter",
+                "3 cloves garlic (minced)",
+                "1 cup chicken stock",
+                "1 cup heavy cream ((double cream in the UK))",
+                "½ cup parmesan cheese (grated)",
+                "1 teaspoon chili flakes",
+                "¼ teaspoon oregano",
+                "¼ teaspoon thyme",
+                "⅓ cup sundried tomatoes (chopped)",
+                "1 tablespoon fresh basil leaves"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Season chicken with salt and pepper, then dredge in flour and shake off any excess.",
+                    "name": "Season chicken with salt and pepper, then dredge in flour and shake off any excess.",
+                    "url": "https://littlesunnykitchen.com/marry-me-chicken/#wprm-recipe-23226-step-0-0"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "In a large skillet, heat olive oil and melt the butter on medium heat. Swirl pan to coat with oil and butter evenly.",
+                    "name": "In a large skillet, heat olive oil and melt the butter on medium heat. Swirl pan to coat with oil and butter evenly.",
+                    "url": "https://littlesunnykitchen.com/marry-me-chicken/#wprm-recipe-23226-step-0-1"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Brown the chicken (do not overcrowd and work in batches if needed) for 4-5 minutes on each side or until golden brown and cooked through. Transfer onto a plate, cover, and set aside.",
+                    "name": "Brown the chicken (do not overcrowd and work in batches if needed) for 4-5 minutes on each side or until golden brown and cooked through. Transfer onto a plate, cover, and set aside.",
+                    "url": "https://littlesunnykitchen.com/marry-me-chicken/#wprm-recipe-23226-step-0-2"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Saute the garlic for a minute or until it&#039;s fragrant. Add the chicken stock, and deglaze the pan scraping any bits stuck to the bottom of the pan with a wooden spoon.",
+                    "name": "Saute the garlic for a minute or until it&#039;s fragrant. Add the chicken stock, and deglaze the pan scraping any bits stuck to the bottom of the pan with a wooden spoon.",
+                    "url": "https://littlesunnykitchen.com/marry-me-chicken/#wprm-recipe-23226-step-0-3"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Adjust the heat to medium-low, and add the heavy cream and the parmesan cheese to the skillet. Allow the sauce to simmer for a couple of minutes, then season with chili flakes, thyme, and oregano.",
+                    "name": "Adjust the heat to medium-low, and add the heavy cream and the parmesan cheese to the skillet. Allow the sauce to simmer for a couple of minutes, then season with chili flakes, thyme, and oregano.",
+                    "url": "https://littlesunnykitchen.com/marry-me-chicken/#wprm-recipe-23226-step-0-4"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Season with salt and pepper to your taste, add the sundried tomatoes then put the chicken back in the sauce and let the sauce simmer and thicken for a few more minutes.",
+                    "name": "Season with salt and pepper to your taste, add the sundried tomatoes then put the chicken back in the sauce and let the sauce simmer and thicken for a few more minutes.",
+                    "url": "https://littlesunnykitchen.com/marry-me-chicken/#wprm-recipe-23226-step-0-5"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Garnish with chopped fresh basil leaves and serve warm over pasta or rice.",
+                    "name": "Garnish with chopped fresh basil leaves and serve warm over pasta or rice.",
+                    "url": "https://littlesunnykitchen.com/marry-me-chicken/#wprm-recipe-23226-step-0-6"
+                }
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.97",
+                "ratingCount": "537"
+            },
+            "recipeCategory": [
+                "Main Course"
+            ],
+            "recipeCuisine": [
+                "American"
+            ],
+            "keywords": "Marry Me Chicken",
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "447 kcal",
+                "carbohydrateContent": "13 g",
+                "proteinContent": "31 g",
+                "fatContent": "30 g",
+                "saturatedFatContent": "15 g",
+                "transFatContent": "1 g",
+                "cholesterolContent": "147 mg",
+                "sodiumContent": "601 mg",
+                "fiberContent": "1 g",
+                "sugarContent": "3 g",
+                "unsaturatedFatContent": "13 g",
+                "servingSize": "1 serving"
+            },
+            "@id": "https://littlesunnykitchen.com/marry-me-chicken/#recipe",
+            "isPartOf": {
+                "@id": "https://littlesunnykitchen.com/marry-me-chicken/#article"
+            },
+            "mainEntityOfPage": "https://littlesunnykitchen.com/marry-me-chicken/"
+        }
+    ]
+}

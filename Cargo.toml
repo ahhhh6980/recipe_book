@@ -1,0 +1,15 @@
+[package]
+name = "recipe_book"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ego-tree = "0.6.2"
+rand = "0.8.5"
+reqwest = {version = "0.11.13" , features = ["blocking"]}
+scraper = "0.13.0"
+serde = {version = "1.0.147", features = ["derive"]}
+serde_json = "1.0.88"
+tui = "0.19.0"

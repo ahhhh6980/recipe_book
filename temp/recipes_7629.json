@@ -1,0 +1,205 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://cafedelites.com/quick-easy-creamy-herb-chicken/",
+            "url": "https://cafedelites.com/quick-easy-creamy-herb-chicken/",
+            "name": "Quick & Easy Creamy Herb Chicken - Cafe Delites",
+            "isPartOf": {
+                "@id": "https://cafedelites.com/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https://cafedelites.com/quick-easy-creamy-herb-chicken/#primaryimage"
+            },
+            "image": {
+                "@id": "https://cafedelites.com/quick-easy-creamy-herb-chicken/#primaryimage"
+            },
+            "thumbnailUrl": "https://cafedelites.com/wp-content/uploads/2016/11/Creamy-Herb-Chicken-35.jpg",
+            "datePublished": "2016-11-02T08:14:31+00:00",
+            "dateModified": "2020-03-18T15:56:51+00:00",
+            "author": {
+                "@id": "https://cafedelites.com/#/schema/person/41fb006b06c4b8e6baf2d320ebc85292"
+            },
+            "description": "Quick And Easy Creamy Herb Chicken, filled with so much flavour, ready and on your table in 15 minutes! You won't believe how easy this is!",
+            "breadcrumb": {
+                "@id": "https://cafedelites.com/quick-easy-creamy-herb-chicken/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "ReadAction",
+                    "target": [
+                        "https://cafedelites.com/quick-easy-creamy-herb-chicken/"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://cafedelites.com/quick-easy-creamy-herb-chicken/#primaryimage",
+            "url": "https://cafedelites.com/wp-content/uploads/2016/11/Creamy-Herb-Chicken-35.jpg",
+            "contentUrl": "https://cafedelites.com/wp-content/uploads/2016/11/Creamy-Herb-Chicken-35.jpg",
+            "width": 800,
+            "height": 1200,
+            "caption": "Quick And Easy Creamy Herb Chicken, filled with so much flavour, ready and on your table in 15 minutes! You won't believe how easy this is! | http://cafedelites.com"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://cafedelites.com/quick-easy-creamy-herb-chicken/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://cafedelites.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Recipes",
+                    "item": "https://cafedelites.com/category/recipes-cafe-delites/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Quick &#038; Easy Creamy Herb Chicken"
+                }
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://cafedelites.com/#website",
+            "url": "https://cafedelites.com/",
+            "name": "Cafe Delites",
+            "description": "for good food lovers",
+            "potentialAction": [
+                {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://cafedelites.com/?s={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            ],
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "Person",
+            "@id": "https://cafedelites.com/#/schema/person/41fb006b06c4b8e6baf2d320ebc85292",
+            "name": "Karina",
+            "description": "Cooking is my passion, or should I say eating. What started out as a little food diary on Instagram developed into a love affair creating full flavoured recipes in the kitchen. After surviving cancer, (Stage 4 Hodgkins Lymphoma) and a lot of life's battles, including molestation, rape and abuse, I am eternally grateful to have been given a second chance. Although my life is far from perfect, I'm loving every moment. Welcome to my world of food!",
+            "sameAs": [
+                "http://cafedelites.com",
+                "https://www.facebook.com/CafeDelites",
+                "https://twitter.com/karinacarrel"
+            ],
+            "url": "https://cafedelites.com/author/liberationhotmail-com-au/"
+        },
+        {
+            "@context": "http://schema.org/",
+            "@type": "Recipe",
+            "name": "Creamy Herb Chicken",
+            "author": {
+                "@type": "Person",
+                "name": "Karina"
+            },
+            "description": "Quick And Easy Creamy Herb Chicken, filled with so much flavour, ready and on your table in 15 minutes! You won't believe how easy this is!",
+            "datePublished": "2016-11-02T19:14:31+00:00",
+            "image": [
+                "https://cafedelites.com/wp-content/uploads/2016/11/Creamy-Herb-Chicken-2700.jpg",
+                "https://cafedelites.com/wp-content/uploads/2016/11/Creamy-Herb-Chicken-2700-500x500.jpg",
+                "https://cafedelites.com/wp-content/uploads/2016/11/Creamy-Herb-Chicken-2700-500x375.jpg",
+                "https://cafedelites.com/wp-content/uploads/2016/11/Creamy-Herb-Chicken-2700-480x270.jpg"
+            ],
+            "recipeYield": [
+                "4",
+                "4 people"
+            ],
+            "prepTime": "PT10M",
+            "cookTime": "PT20M",
+            "totalTime": "PT30M",
+            "recipeIngredient": [
+                "4  chicken breasts ((pounded 1/2-inch thin))",
+                "2 teaspoons each of onion powder and garlic powder",
+                "1 teaspoon fresh chopped parsley",
+                "1/2 teaspoon each of dried thyme and dried rosemary*",
+                "salt and pepper (, to season)",
+                "4 cloves garlic (, minced (or 1 tablespoon minced garlic))",
+                "1 teaspoon fresh chopped parsley",
+                "1/2 teaspoon each of dried thyme and dried rosemary",
+                "1 cup milk ((or half and half)*)",
+                "Salt and freshly ground black pepper (, to taste)",
+                "1 teaspoon cornstarch mixed with 1 tablespoon water (, until smooth)"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Coat chicken breasts with the onion and garlic powders and herbs. Season generously with salt and pepper.",
+                    "name": "Coat chicken breasts with the onion and garlic powders and herbs. Season generously with salt and pepper.",
+                    "url": "https://cafedelites.com/quick-easy-creamy-herb-chicken/#wprm-recipe-40325-step-0-0"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Heat 1 tablespoon of oil a large pan or skillet over medium-high heat and cook chicken breasts until opaque and no longer pink inside (about 5 minutes each side, depending on thickness). Transfer to a plate; set aside.",
+                    "name": "Heat 1 tablespoon of oil a large pan or skillet over medium-high heat and cook chicken breasts until opaque and no longer pink inside (about 5 minutes each side, depending on thickness). Transfer to a plate; set aside.",
+                    "url": "https://cafedelites.com/quick-easy-creamy-herb-chicken/#wprm-recipe-40325-step-0-1"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "To the same pan or skillet, heat another 2 teaspoons of olive oil and sauté garlic, with parsley, thyme and rosemary, for about 1 minute, or until fragrant.",
+                    "name": "To the same pan or skillet, heat another 2 teaspoons of olive oil and sauté garlic, with parsley, thyme and rosemary, for about 1 minute, or until fragrant.",
+                    "url": "https://cafedelites.com/quick-easy-creamy-herb-chicken/#wprm-recipe-40325-step-0-2"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Stir in milk (or cream); season with salt and pepper, to taste.",
+                    "name": "Stir in milk (or cream); season with salt and pepper, to taste.",
+                    "url": "https://cafedelites.com/quick-easy-creamy-herb-chicken/#wprm-recipe-40325-step-0-3"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Bring to a boil; add the cornstarch mixture to the centre of the pan, quickly stirring, until sauce has thickened slightly. Reduce heat and simmer gently for a further minute to allow the sauce to thicken more.",
+                    "name": "Bring to a boil; add the cornstarch mixture to the centre of the pan, quickly stirring, until sauce has thickened slightly. Reduce heat and simmer gently for a further minute to allow the sauce to thicken more.",
+                    "url": "https://cafedelites.com/quick-easy-creamy-herb-chicken/#wprm-recipe-40325-step-0-4"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Return chicken to the skillet. Sprinkle with extra herbs if desired. Serve immediately.",
+                    "name": "Return chicken to the skillet. Sprinkle with extra herbs if desired. Serve immediately.",
+                    "url": "https://cafedelites.com/quick-easy-creamy-herb-chicken/#wprm-recipe-40325-step-0-5"
+                }
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.99",
+                "ratingCount": "91"
+            },
+            "recipeCategory": [
+                "Dinner"
+            ],
+            "recipeCuisine": [
+                "American"
+            ],
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "176 kcal",
+                "carbohydrateContent": "5 g",
+                "proteinContent": "26 g",
+                "fatContent": "4 g",
+                "saturatedFatContent": "1 g",
+                "cholesterolContent": "78 mg",
+                "sodiumContent": "158 mg",
+                "sugarContent": "3 g",
+                "servingSize": "1 serving"
+            },
+            "@id": "https://cafedelites.com/quick-easy-creamy-herb-chicken/#recipe",
+            "isPartOf": {
+                "@id": "https://cafedelites.com/quick-easy-creamy-herb-chicken/"
+            },
+            "mainEntityOfPage": "https://cafedelites.com/quick-easy-creamy-herb-chicken/"
+        }
+    ]
+}

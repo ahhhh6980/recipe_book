@@ -1,0 +1,235 @@
+{
+    "@type": "ParsedRecipe",
+    "origin": "https://www.spendwithpennies.com/homemade-carrot-bread/",
+    "title": "Carrot Bread",
+    "author_name": "Holly Nilsson",
+    "description": "Homemade Carrot Bread is an easy quick bread that uses simple ingredients. Pack a slice in a purse or backpack for an afternoon snack!",
+    "keywords": [
+        "Carrot",
+        "Bread"
+    ],
+    "prep_time": "1h 15m",
+    "servings": {
+        "@type": "Rational",
+        "value": 16
+    },
+    "ingredients": [
+        {
+            "name": "all purpose flour",
+            "count": {
+                "@type": "Rational",
+                "value": 2
+            },
+            "unit": "cups"
+        },
+        {
+            "name": "sugar",
+            "count": {
+                "@type": "Rational",
+                "value": 1
+            },
+            "unit": "cup"
+        },
+        {
+            "name": "baking soda",
+            "count": {
+                "@type": "Rational",
+                "value": 1,
+                "fract": [
+                    1,
+                    2
+                ]
+            },
+            "unit": "tsp"
+        },
+        {
+            "name": "cinnamon",
+            "count": {
+                "@type": "Rational",
+                "value": 1,
+                "fract": [
+                    1,
+                    2
+                ]
+            },
+            "unit": "tsp"
+        },
+        {
+            "name": "salt",
+            "count": {
+                "@type": "Rational",
+                "value": 1
+            },
+            "unit": "tsp"
+        },
+        {
+            "name": "pumpkin pie spice",
+            "count": {
+                "@type": "Rational",
+                "fract": [
+                    1,
+                    2
+                ]
+            },
+            "unit": "tsp"
+        },
+        {
+            "name": "grated carrots",
+            "count": {
+                "@type": "Rational",
+                "value": 2,
+                "fract": [
+                    1,
+                    2
+                ]
+            },
+            "unit": "cups"
+        },
+        {
+            "name": "eggs",
+            "count": {
+                "@type": "Rational",
+                "value": 3
+            },
+            "unit": ""
+        },
+        {
+            "name": "vegetable oil",
+            "count": {
+                "@type": "Rational",
+                "fract": [
+                    3,
+                    4
+                ]
+            },
+            "unit": "cups"
+        },
+        {
+            "name": "milk",
+            "count": {
+                "@type": "Rational",
+                "fract": [
+                    1,
+                    4
+                ]
+            },
+            "unit": "cup"
+        },
+        {
+            "name": "vanilla",
+            "count": {
+                "@type": "Rational",
+                "value": 1
+            },
+            "unit": "tsp"
+        },
+        {
+            "name": "walnut",
+            "count": {
+                "@type": "Rational",
+                "fract": [
+                    3,
+                    4
+                ]
+            },
+            "unit": "cups"
+        }
+    ],
+    "serving_size": {
+        "count": {
+            "@type": "Rational",
+            "value": 1
+        },
+        "unit": "slice"
+    },
+    "nutrition": [
+        {
+            "@type": "Nutrient",
+            "name": "Calories",
+            "count": {
+                "@type": "Rational",
+                "value": 242
+            },
+            "unit": "kcal"
+        },
+        {
+            "@type": "Nutrient",
+            "name": "Carbohydrates",
+            "count": {
+                "@type": "Rational",
+                "value": 25
+            },
+            "unit": "grams"
+        },
+        {
+            "@type": "Nutrient",
+            "name": "Protein",
+            "count": {
+                "@type": "Rational",
+                "value": 3
+            },
+            "unit": "grams"
+        },
+        {
+            "@type": "Nutrient",
+            "name": "Fat",
+            "count": {
+                "@type": "Rational",
+                "value": 15
+            },
+            "unit": "grams"
+        },
+        {
+            "@type": "Nutrient",
+            "name": "Saturated Fat",
+            "count": {
+                "@type": "Rational",
+                "value": 9
+            },
+            "unit": "grams"
+        },
+        {
+            "@type": "Nutrient",
+            "name": "Cholesterol",
+            "count": {
+                "@type": "Rational",
+                "value": 31
+            },
+            "unit": "mg"
+        },
+        {
+            "@type": "Nutrient",
+            "name": "Sodium",
+            "count": {
+                "@type": "Rational",
+                "value": 158
+            },
+            "unit": "mg"
+        },
+        {
+            "@type": "Nutrient",
+            "name": "Fiber",
+            "count": {
+                "@type": "Rational",
+                "value": 1
+            },
+            "unit": "gram"
+        },
+        {
+            "@type": "Nutrient",
+            "name": "Sugar",
+            "count": {
+                "@type": "Rational",
+                "value": 13
+            },
+            "unit": "grams"
+        }
+    ],
+    "directions": [
+        "Preheat oven to 350F. Line a 9x5 loaf pan with parchment paper.",
+        "Whisk together dry ingredients in a medium bowl. Set aside.",
+        "Mix carrots, eggs, oil, milk, and vanilla in a large bowl.",
+        "Add the dry ingredients to the wet mixture. Fold in walnuts and mix just until combined",
+        "Pour into prepared pan and bake for 55-65 minutes or until a toothpick comes out clean"
+    ]
+}

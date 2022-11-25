@@ -1,0 +1,263 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "@id": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#article",
+            "isPartOf": {
+                "@id": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/"
+            },
+            "author": {
+                "name": "Heidi",
+                "@id": "https://www.foodiecrush.com/#/schema/person/9bda81c1504d352621a895bc2aa47544"
+            },
+            "headline": "30 Healthy Easy Chicken Recipes",
+            "datePublished": "2021-10-04T12:00:00+00:00",
+            "dateModified": "2022-09-28T13:24:01+00:00",
+            "wordCount": 2015,
+            "commentCount": 10,
+            "publisher": {
+                "@id": "https://www.foodiecrush.com/#organization"
+            },
+            "image": {
+                "@id": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#primaryimage"
+            },
+            "thumbnailUrl": "https://www.foodiecrush.com/wp-content/uploads/2019/08/30-Chicken-Dinners.jpg",
+            "keywords": [
+                "chicken",
+                "dinner",
+                "easy",
+                "healthy"
+            ],
+            "articleSection": [
+                "All Recipes",
+                "Chicken and Turkey",
+                "Comfort Food",
+                "Dinner",
+                "Family Friendly",
+                "Greek Recipes",
+                "Grill Recipes",
+                "Healthy",
+                "Italian Recipes",
+                "Mediterranean",
+                "Mediterranean Recipes",
+                "Mexican Recipes",
+                "Recipe Round Up",
+                "Seasonal : Fall",
+                "Seasonal : Spring",
+                "Seasonal : Summer",
+                "Seasonal : Winter"
+            ],
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "CommentAction",
+                    "name": "Comment",
+                    "target": [
+                        "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#respond"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/",
+            "url": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/",
+            "name": "Easy Chicken Recipes | Greek Chicken Marinade foodiecrush.com",
+            "isPartOf": {
+                "@id": "https://www.foodiecrush.com/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#primaryimage"
+            },
+            "image": {
+                "@id": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#primaryimage"
+            },
+            "thumbnailUrl": "https://www.foodiecrush.com/wp-content/uploads/2019/08/30-Chicken-Dinners.jpg",
+            "datePublished": "2021-10-04T12:00:00+00:00",
+            "dateModified": "2022-09-28T13:24:01+00:00",
+            "description": "This list of 30 easy chicken recipes makes cooking good healthy meals for dinner at home just as easy as picking up or ordering in.",
+            "breadcrumb": {
+                "@id": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "ReadAction",
+                    "target": [
+                        "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#primaryimage",
+            "url": "https://www.foodiecrush.com/wp-content/uploads/2019/08/30-Chicken-Dinners.jpg",
+            "contentUrl": "https://www.foodiecrush.com/wp-content/uploads/2019/08/30-Chicken-Dinners.jpg",
+            "width": 600,
+            "height": 900,
+            "caption": "30 Easy Healthy Chicken Dinner Ideas | foodiecrush.com"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.foodiecrush.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "30 Healthy Easy Chicken Recipes"
+                }
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.foodiecrush.com/#website",
+            "url": "https://www.foodiecrush.com/",
+            "name": "foodiecrush",
+            "description": "real good real food for real people",
+            "publisher": {
+                "@id": "https://www.foodiecrush.com/#organization"
+            },
+            "potentialAction": [
+                {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://www.foodiecrush.com/?s={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            ],
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://www.foodiecrush.com/#organization",
+            "name": "foodiecrush.com",
+            "url": "https://www.foodiecrush.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "inLanguage": "en-US",
+                "@id": "https://www.foodiecrush.com/#/schema/logo/image/",
+                "url": "https://www.foodiecrush.com/wp-content/uploads/2015/01/fc_logo.png",
+                "contentUrl": "https://www.foodiecrush.com/wp-content/uploads/2015/01/fc_logo.png",
+                "width": 465,
+                "height": 70,
+                "caption": "foodiecrush.com"
+            },
+            "image": {
+                "@id": "https://www.foodiecrush.com/#/schema/logo/image/"
+            },
+            "sameAs": [
+                "https://www.instagram.com/foodiecrush",
+                "https://pinterest.com/foodiecrush/",
+                "https://www.facebook.com/FoodieCrush"
+            ]
+        },
+        {
+            "@type": "Person",
+            "@id": "https://www.foodiecrush.com/#/schema/person/9bda81c1504d352621a895bc2aa47544",
+            "name": "Heidi",
+            "description": "Hi! I’m Heidi and I cook real good, real food I hope you’ll love to make, too. Contact | Start Here! | Subscribe",
+            "sameAs": [
+                "http://www.foodiecrush.com"
+            ],
+            "url": "https://www.foodiecrush.com/author/foodieheidi/"
+        },
+        {
+            "@context": "http://schema.org/",
+            "@type": "Recipe",
+            "name": "30 Healthy Easy Chicken Recipes | THE BEST Greek Chicken Marinade",
+            "author": {
+                "@type": "Person",
+                "name": "Heidi"
+            },
+            "description": "This garlic, lemon, and oregano Greek marinade can be used for chicken that's grilled, baked or pan-fried and is great any which way you choose.",
+            "datePublished": "2021-10-04T06:00:00+00:00",
+            "image": [
+                "https://www.foodiecrush.com/wp-content/uploads/2018/06/Grilled-Greek-Chicken-foodiecrush.com-014-300x300-1.jpg",
+                "https://www.foodiecrush.com/wp-content/uploads/2018/06/Grilled-Greek-Chicken-foodiecrush.com-014-300x300-1-300x270.jpg"
+            ],
+            "recipeYield": [
+                "4"
+            ],
+            "prepTime": "PT5M",
+            "cookTime": "PT15M",
+            "totalTime": "PT50M",
+            "recipeIngredient": [
+                "1 pound boneless (, skinless chicken breasts (about 2 large breasts))",
+                "⅓ cup plain Greek yogurt",
+                "¼ cup olive oil",
+                "4  lemons",
+                "4-5 cloves garlic (, pressed or minced)",
+                "2 tablespoons dried oregano",
+                "1 teaspoon kosher salt",
+                "½ teaspoon freshly ground black pepper"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Place the chicken pieces in a freezer bag or a bowl and set aside.",
+                    "name": "Place the chicken pieces in a freezer bag or a bowl and set aside.",
+                    "url": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#wprm-recipe-35289-step-0-0"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Add the Greek yogurt and olive oil to a medium size bowl. Zest one of the lemons and add to the bowl. Juice that lemon into the bowl with the zest. Slice the other three lemons and set aside. Add the minced garlic, oregano, kosher salt and black pepper to the lemon juice and zest and stir. Pour half of the marinade into the freezer bag or the bowl with the chicken pieces and reserve the other half of the marinade for basting. Marinate the chicken for 30 minutes or up to 3 hours in the refrigerator.",
+                    "name": "Add the Greek yogurt and olive oil to a medium size bowl. Zest one of the lemons and add to the bowl. Juice that lemon into the bowl with the zest. Slice the other three lemons and set aside. Add the minced garlic, oregano, kosher salt and black pepper to the lemon juice and zest and stir. Pour half of the marinade into the freezer bag or the bowl with the chicken pieces and reserve the other half of the marinade for basting. Marinate the chicken for 30 minutes or up to 3 hours in the refrigerator.",
+                    "url": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#wprm-recipe-35289-step-0-1"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "When ready to grill, prepare the grill by lightly oiling the grate with vegetable oil or cooking spray and set to medium high heat.",
+                    "name": "When ready to grill, prepare the grill by lightly oiling the grate with vegetable oil or cooking spray and set to medium high heat.",
+                    "url": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#wprm-recipe-35289-step-0-2"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Grill the chicken, basting with the reserved marinade and turning often so each side browns and has light grill marks, until cooked through, about 15-20 minutes or until the chicken juices run clear. During the last 5 minutes of cooking add the 3 sliced lemons to the grill, turning once or twice. Allow the chicken to rest for 5 minutes before slicing and serve with the grilled lemons. Refrigerate leftovers for up to 3 days.",
+                    "name": "Grill the chicken, basting with the reserved marinade and turning often so each side browns and has light grill marks, until cooked through, about 15-20 minutes or until the chicken juices run clear. During the last 5 minutes of cooking add the 3 sliced lemons to the grill, turning once or twice. Allow the chicken to rest for 5 minutes before slicing and serve with the grilled lemons. Refrigerate leftovers for up to 3 days.",
+                    "url": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#wprm-recipe-35289-step-0-3"
+                }
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.55",
+                "ratingCount": "545"
+            },
+            "recipeCategory": [
+                "Main Course"
+            ],
+            "recipeCuisine": [
+                "Greek"
+            ],
+            "keywords": "grilled chicken",
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "307 kcal",
+                "carbohydrateContent": "14 g",
+                "proteinContent": "25 g",
+                "fatContent": "19 g",
+                "saturatedFatContent": "3 g",
+                "cholesterolContent": "109 mg",
+                "sodiumContent": "692 mg",
+                "fiberContent": "4 g",
+                "sugarContent": "3 g",
+                "servingSize": "1 serving"
+            },
+            "@id": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#recipe",
+            "isPartOf": {
+                "@id": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/#article"
+            },
+            "mainEntityOfPage": "https://www.foodiecrush.com/30-easy-healthy-chicken-dinners-ideas/"
+        }
+    ]
+}
