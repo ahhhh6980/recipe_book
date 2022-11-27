@@ -15,7 +15,7 @@
             "datePublished": "2020-06-05T00:00:00+00:00",
             "dateModified": "2022-02-02T03:28:23+00:00",
             "wordCount": 1447,
-            "commentCount": 449,
+            "commentCount": 451,
             "publisher": {
                 "@id": "https://littlesunnykitchen.com/#organization"
             },
@@ -261,7 +261,7 @@
             "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.97",
-                "ratingCount": "537"
+                "ratingCount": "540"
             },
             "recipeCategory": [
                 "Main Course"

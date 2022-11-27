@@ -2,7 +2,20 @@
 #![allow(unused_variables)]
 use crate::{mixed_rational::MixedRational, recipe::ParsedRecipe, units::*};
 use serde_json::{Result, Value};
-use std::{error::Error, fs, path::PathBuf};
+use std::{error::Error, fs, path::PathBuf, time::SystemTime};
+use time::OffsetDateTime;
+
+pub fn get_time_string() -> String {
+    let test: OffsetDateTime = SystemTime::now().into();
+    test.to_string()
+}
+
+pub fn proper_string_serialize<S>(s: &str, serializer: S) -> std::result::Result<S::Ok, S::Error>
+where
+    S: serde::Serializer,
+{
+    serializer.serialize_str(&(s.replace('"', "")))
+}
 
 pub fn recursive_json_grab(
     dir: PathBuf,
@@ -27,15 +40,14 @@ pub fn recursive_json_grab(
                     entry.path().file_name().unwrap().to_string_lossy()
                 );
                 // Read as string so that serde_json can parse it
-                if let Ok(data) = fs::read_to_string(entry.path()) {
-                    let recipe_data: Value = serde_json::from_str(&data)?;
+                if let Ok(recipe) = ParsedRecipe::from_path("test.json") {
                     // Print name of recipe and then push to our recipes list
                     println!(
                         "{} Recipe Name: {}",
                         padding.repeat(depth + 1),
-                        recipe_data["title"]
+                        recipe.text.title
                     );
-                    new_recipes.push(recipe_data.into());
+                    new_recipes.push(recipe);
                 }
             } else {
                 // Otherwise repeat this process over this folder

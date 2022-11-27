@@ -1,3 +1,5 @@
+use serde::de::Visitor;
+
 use crate::MixedRational;
 
 /*
@@ -18,8 +20,7 @@ pub enum UnitType {
 
     Traditional,
 }
-
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Copy, Debug, Default, serde::Serialize, serde::Deserialize)]
 pub struct MeasureType {
     pub count: MixedRational,
     pub unit: Measure,
@@ -48,14 +49,12 @@ impl std::ops::Mul<MixedRational> for MeasureType {
 impl MeasureType {
     pub fn convert(&self, new_unit: Unit) -> Option<Self> {
         let new_unit = Measure::from_enum(new_unit);
-        if let Some(new_count) = self.unit.convert(self.count, new_unit) {
-            Some(MeasureType {
+        self.unit
+            .convert(self.count, new_unit)
+            .map(|new_count| MeasureType {
                 count: new_count,
                 unit: new_unit,
             })
-        } else {
-            None
-        }
     }
     pub fn new(name: String, count: MixedRational) -> Self {
         MeasureType {
@@ -113,10 +112,54 @@ impl MeasureType {
 
 #[derive(Clone, Copy, Debug)]
 pub struct Measure {
-    pub names: &'static [&'static str],
     pub unit: Unit,
+    pub names: &'static [&'static str],
     pub fluid: bool,
     // ,
+}
+
+impl Default for Measure {
+    fn default() -> Self {
+        Measure {
+            unit: Unit::Other,
+            names: &[""],
+            fluid: false,
+        }
+    }
+}
+
+pub struct MeasureVisitor;
+impl<'de> Visitor<'de> for MeasureVisitor {
+    type Value = Measure;
+
+    fn expecting(&self, formatter: &mut std::fmt::Formatter) -> std::fmt::Result {
+        write!(formatter, "A named standard measurement unit")
+    }
+
+    fn visit_str<E>(self, v: &str) -> Result<Self::Value, E>
+    where
+        E: serde::de::Error,
+    {
+        Ok(Measure::new(String::from(v)))
+    }
+}
+
+impl<'de> serde::Deserialize<'de> for Measure {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        deserializer.deserialize_str(MeasureVisitor)
+    }
+}
+
+impl serde::Serialize for Measure {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        serializer.serialize_str(self.names[0])
+    }
 }
 
 impl std::fmt::Display for Measure {
@@ -125,7 +168,7 @@ impl std::fmt::Display for Measure {
     }
 }
 
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Copy, Debug, serde::Deserialize)]
 pub enum Unit {
     // Spices
     Drop,
@@ -159,6 +202,15 @@ pub enum Unit {
     Milligram,
 
     Other,
+}
+
+impl serde::Serialize for Unit {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        serializer.serialize_str(Measure::from_enum(*self).names[0])
+    }
 }
 /*
 pub fn min_measurements(measure: MeasureType) -> Vec<MeasureType> {

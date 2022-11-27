@@ -1,0 +1,252 @@
+{
+"@context": "http://schema.org",
+"@type": ["Recipe"]
+,"headline": "Smothered Turkey Wings"
+,"datePublished": "2016-12-29T06:54:05.000-05:00"
+,"dateModified": "2022-03-28T13:58:18.529-04:00"
+,"author": [
+{"@type": "Person"
+,"name": "Elise Bauer"
+,"description": "Elise founded Simply Recipes in 2003 and led the site until 2019. She has an MA in Food Research from Stanford University."
+,"jobTitle": "Founder"
+,"url": "https://www.simplyrecipes.com/elise-bauer-5091824"
+,"sameAs": [
+"https://www.instagram.com/elisebauer/"
+]
+,"knowsAbout": ["Scratch cooking with whole ingredients"]
+,"alumniOf": [
+{
+"@type": "Organization",
+"Name": "Stanford University: BS in Environmental Science; MA in Food Research; MBA from the Graduate School of Business "
+}
+]
+}
+]
+,"description": "Slow-roasted turkey wings are smothered in gravy made with a quick homemade stock. Smothered turkey wings are comfort food at its finest!"
+,"image": {
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/qzWzg8htkJSP0broJwIGdfVWd4w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2016__12__smothered-turkey-wings-horiz-a2-1800-eb866e1b07d042fbbf08cecfb8a5945d.jpg",
+"height": 1008,
+"width": 1500
+}
+,"publisher": {
+"@type": "Organization",
+"name": "Simply Recipes",
+"url": "https://www.simplyrecipes.com",
+"logo": {
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/QvixEwCD02s_lnkgkVb6mHwKS7c=/1125x320/filters:no_upscale():max_bytes(150000):strip_icc()/SimplyRecipesLogoTransparent-07a297c54b2142ae9c079abb2f0fa639.png",
+"width": 1125,
+"height": 320
+},
+"brand": "Simply Recipes"
+, "publishingPrinciples": "https://www.simplyrecipes.com/about-us-5096129#toc-editorial-guidelines"
+, "sameAs" : [
+"https://www.facebook.com/simplyrecipes",
+"https://www.instagram.com/simplyrecipes",
+"https://www.pinterest.com/simplyrecipes"
+]
+}
+,"name": "Smothered Turkey Wings"
+,"aggregateRating": {
+"@type": "AggregateRating",
+"ratingValue": "5",
+"ratingCount": "4"
+}
+,"cookTime": "PT160M"
+,"keywords": "Budget, Comfort Food, Southern, Dinner, Favorite Winter"
+,"nutrition": {
+"@type": "NutritionInformation"
+,"calories": "328 kcal"
+,"carbohydrateContent": "8 g"
+,"cholesterolContent": "74 mg"
+,"fiberContent": "1 g"
+,"proteinContent": "14 g"
+,"saturatedFatContent": "10 g"
+,"sodiumContent": "602 mg"
+,"sugarContent": "1 g"
+,"fatContent": "27 g"
+,"servingSize": "Serves 6"
+,"unsaturatedFatContent": "0 g"
+}
+,"prepTime": "PT20M"
+, "recipeCategory": ["Dinner","Budget","Comfort Food"]
+,"recipeCuisine": ["Southern"]
+,"recipeIngredient": [
+"Turkey Wings:",
+"6 whole turkey wings (about 5 pounds), or 7 turkey wings without the tips",
+"1 Tbsp extra virgin olive oil",
+"Salt",
+"Stock:",
+"2 Tbsp extra virgin olive oil",
+"1 carrot, chopped",
+"1 half onion, chopped",
+"1 celery rib, chopped",
+"3 cups water",
+"1/2 teaspoon salt",
+"Gravy:",
+"3 Tbsp butter",
+"3 Tbsp flour",
+"3 cups of turkey stock (that you make in step...)",
+"1/2 teaspoon yellow mustard",
+"1/2 teaspoon salt",
+"1/4 teaspoon pepper",
+"1/2 teaspoon dried thyme",
+"1/4 cup cream" ]
+,"recipeInstructions": [
+{
+"@type": "HowToStep"
+,"text": "Preheat the oven: Preheat the oven to 275°F."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/o7KJcKdPkqcmEsdKoz2x740jIAA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2016__12__22181016__smothered-turkey-wings-method-1-f5ee552315c6420d91f43ec146b799ad.jpg"
+}
+]
+,"text": "Prep the turkey wings: Using poultry sheers or a sharp knife, separate each turkey wing into 3 segments—drumette, flat, and tip. Set aside the tips (if you have them) for making stock."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/XMlL3fVe1IsUbDh3NCOKlDQXbUE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2016__12__22181649__smothered-turkey-wings-method-2-41de3089cd2e4ea2b8b65e930b7b1fe3.jpg"
+}
+]
+,"text": "Slow roast the turkey wings: Place turkey wing drumettes and flats, skin side up, onto a rimmed baking sheet or roasting pan. Toss with olive oil. Sprinkle with salt. Cover with aluminum foil and put into a 275°F oven for 2 1/2 hours."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/4OKBELzlM5xBw03w-IvAz1hHGtM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2016__12__22181642__smothered-turkey-wings-method-7-c379d12dd8014b88b8d0e8f3b29264a3.jpg"
+}
+]
+,"text": "Make the stock: While the turkey wing drumettes and flats are roasting, make stock with the tips. Heat 2 tablespoons olive oil in a medium, thick-bottomed pot on medium high heat. Add the turkey wing tips and let them brown on all sides. Add the chopped carrot, onion, and celery, and sauté them for a few minutes with the wings. Add 3 cups of water, enough to cover the wings and vegetables, and salt. Bring to a boil on high heat, then reduce to a low simmer on the lowest setting. Cover and let simmer while the wings roast in the oven, a couple of hours."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/GegFaPfbcR3uBms_IdSj6kZNQoQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2016__12__22181641__smothered-turkey-wings-method-8-e653bb2b5491485d8f5767c4fa8628e8.jpg"
+}
+]
+,"text": "Strain the stock: When the wings are close to being done, strain the stock so you can start making the gravy. Remove and discard the largest solids from the pot. Then strain the rest of the stock through a fine mesh strainer. You should have about 3 cups of stock. Reserve for the next step."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/0PMXw8O9p9oawFjfvISaD7Uw-2U=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2016__12__22182512__smothered-turkey-wings-method-11-762edfd1222542ac8211a9c56b90da10.jpg"
+}
+]
+,"text": "Make the gravy: Make a roux by melting 3 tablespoons butter in a medium sized, thick-bottomed pot, on medium heat. Add the flour and whisk to combine. Let the roux cook and bubble for a minute or so. Slowly whisk in the turkey stock you made in steps, whisking constantly to break up any lumps. Whisk in the mustard, salt, pepper, and thyme. Whisk in the cream. Let simmer on low heat to thicken."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/8OmBSf0lKaXg58rijfHp5dswjn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2016__12__22182511__smothered-turkey-wings-method-12-d1cb1113b4b54e3fb22b640bfabf0e7f.jpg"
+}
+]
+,"text": "Broil the wings to brown them: After 2 1/2 hours of slow cooking in the oven, the turkey wings should be fall apart tender (if not, you can leave them in longer until they are). Remove the foil and place the wings on a rack a few inches under the broiler. Broil for 5 minutes or so, until the skin gets somewhat browned."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/KFlWOa9VSTfkMFbb6AW5xzrs_cU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2016__12__22182509__smothered-turkey-wings-method-13-7753980e55634aaca7ce77f13da56d1e.jpg"
+}
+]
+,"text": "Scrape the pan drippings into the gravy: You don&#39;t have to do this, but it will add even more flavor to your gravy. If the drippings are really stuck to the pan, place the roasting pan on your stovetop and turn on the burners under the pan. Add a cup of water to the pan and use a metal spatula to scrape up the drippings. Pour them off into the gray pot. To serve, pour the gravy over the wings. Serve with a side of mashed potatoes , root vegetables , or cauliflower ."
+} ,{
+"@type": "HowToStep"
+,"text": "Serve the turkey wings with gravy: To serve, pour the gravy over the wings. Serve with a side of mashed potatoes , root vegetables , or cauliflower ."
+} ]
+,"recipeYield": "6"
+,"totalTime": "PT180M"
+,"review": [
+{
+"@type": "Review",
+"author": {
+"@type": "Person",
+"name": "Marie"
+},
+"reviewBody": "I don't have cream (or even milk)... would it be okay to omit?\n\n\nAnd you don't really season the meat? Just salt? That doesn't seem like much flavor..."
+}
+,
+{
+"@type": "Review",
+"author": {
+"@type": "Person",
+"name": "Sky"
+},
+"reviewBody": "Help I am only making 2/3 turkey wings how long should I cook it in the oven? Because this is about 3/4 wings less then the cooking time"
+}
+,
+{
+"@type": "Review",
+"author": {
+"@type": "Person",
+"name": "Steven H."
+},
+"reviewBody": "So good. Meat was so tender. Gravy was so flavorful. This is one of my new favorite meals."
+}
+,
+{
+"@type": "Review",
+"author": {
+"@type": "Person",
+"name": "Michael"
+},
+"reviewBody": "Made it last last night for my family. Everyone loved it. Will definitely make it again. My first time cooking turkey wings like this"
+}
+,
+{
+"@type": "Review",
+"author": {
+"@type": "Person",
+"name": "Brandyn P"
+},
+"reviewBody": "Making it right now, smells delicious and the stock is divine!"
+}
+]
+,"mainEntityOfPage": {
+"@type": ["WebPage"]
+,"@id": "https://www.simplyrecipes.com/recipes/smothered_turkey_wings/"
+,"breadcrumb": {
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"item": {
+"@id": "https://www.simplyrecipes.com/family-dinner-recipes-5091349",
+"name": "Family Dinners"
+}
+}
+,
+{
+"@type": "ListItem",
+"position": 2,
+"item": {
+"@id": "https://www.simplyrecipes.com/cheap-dinner-recipes-5091348",
+"name": "Cheap Dinners"
+}
+}
+,
+{
+"@type": "ListItem",
+"position": 3,
+"item": {
+"@id": "https://www.simplyrecipes.com/recipes/smothered_turkey_wings/",
+"name": "Smothered Turkey Wings"
+}
+}
+]
+}
+}
+, "about": [
+]
+}

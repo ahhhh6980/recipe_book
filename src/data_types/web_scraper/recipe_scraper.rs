@@ -1,6 +1,64 @@
+use crate::get_time_string;
+use reqwest::header::Iter;
+use serde::de::IntoDeserializer;
+
+#[derive(Default)]
 pub struct Scraper {
     pub json: Vec<serde_json::Value>,
     pub un_parsed: Vec<(String, scraper::Html)>,
+}
+
+#[derive(Clone, serde::Serialize, serde::Deserialize)]
+pub struct UrlHistoryItem {
+    pub time: String,
+    pub url: String,
+    pub name: String,
+    pub processed: bool,
+}
+
+#[derive(Clone, serde::Serialize, serde::Deserialize)]
+pub struct UrlHistory {
+    pub grabbed_json_history: Vec<UrlHistoryItem>,
+    pub skipped: Vec<UrlHistoryItem>,
+    //pub non_json_urls: Vec<UrlHistory>,
+}
+
+impl UrlHistory {
+    pub fn get_grabbed(&self) -> Vec<String> {
+        self.grabbed_json_history
+            .clone()
+            .into_iter()
+            .map(|h| h.url)
+            .collect()
+    }
+    pub fn from_file<P>(path: P) -> Result<Self, serde_json::Error>
+    where
+        P: AsRef<std::path::Path>,
+    {
+        let backup = serde_json::json!({
+            "grabbed_json_history": [],
+            "skipped": []
+        });
+        Self::deserialize_json_string(
+            if let Ok(f) = &std::fs::read_to_string(path) {
+                if let Ok(s) = serde_json::from_str(f) {
+                    s
+                } else {
+                    backup
+                }
+            } else {
+                backup
+            }
+            .into_deserializer(),
+        )
+    }
+    fn deserialize_json_string<'de, D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::de::Deserializer<'de>,
+    {
+        let s: serde_json::Value = serde::de::Deserialize::deserialize(deserializer)?;
+        serde_json::from_value(s).map_err(serde::de::Error::custom)
+    }
 }
 
 impl Scraper {
@@ -9,9 +67,18 @@ impl Scraper {
         urls: Vec<String>,
         char_count_limit: usize,
     ) -> std::result::Result<Vec<usize>, Box<dyn std::error::Error>> {
+        let mut url_hist_obj = UrlHistory::from_file("temp/scrape_history.json")?;
+        let url_history = url_hist_obj.get_grabbed();
+        for url in &url_history {
+            println!("{}", url);
+        }
         let mut found = Vec::new();
         for (i, url) in urls.iter().enumerate() {
+            if url_history.contains(url) {
+                continue;
+            }
             // Get the web page
+            println!("{}", url);
             let response = reqwest::blocking::get(url).unwrap().text().unwrap();
             let document = scraper::Html::parse_document(&response);
             let tree = &document.tree;
@@ -40,10 +107,56 @@ impl Scraper {
                             txt.remove(txt.len() - 1);
                         }
                         // Remove escape characters
-                        txt = txt.replace(r#"\/"#, " ");
+                        txt = txt.replace(r#"\/"#, "/").replace(r#"\u00a0"#, " ");
+                        let json: serde_json::Value = serde_json::from_str(&txt)?;
+                        let graph = &json["@graph"];
+                        if let Some(arr) = graph.as_array() {
+                            for item in arr {
+                                if format!("{}", item["@type"])
+                                    .to_lowercase()
+                                    .contains("recipe")
+                                {
+                                    println!("{} : {}", i, item["name"]);
+                                    std::fs::write(
+                                        format!(
+                                            "temp/{}.json",
+                                            &item["name"]
+                                                .to_string()
+                                                .replace(' ', "_")
+                                                .replace('"', "")
+                                        ),
+                                        &txt,
+                                    )?;
+                                    self.json.push(item.clone());
+                                    found.push(i);
+                                    url_hist_obj.grabbed_json_history.push(UrlHistoryItem {
+                                        time: get_time_string(),
+                                        url: url.clone(),
+                                        name: item["name"].to_string().replace('"', ""),
+                                        processed: false,
+                                    })
+                                }
+                            }
+                        } else {
+                            println!("{} : {}", i, json["name"]);
+                            std::fs::write(
+                                format!(
+                                    "temp/{}.json",
+                                    &json["name"].to_string().replace(' ', "_").replace('"', "")
+                                ),
+                                &txt,
+                            )?;
+                            self.json.push(json.clone());
+                            found.push(i);
+                            url_hist_obj.grabbed_json_history.push(UrlHistoryItem {
+                                time: get_time_string(),
+                                url: url.clone(),
+                                name: json["name"].to_string().replace('"', ""),
+                                processed: false,
+                            })
+                        }
                         // Parse to JSON and push to structs list of JSON
-                        self.json.push(serde_json::from_str(&txt)?);
-                        found.push(i);
+
                         break;
                     }
                 }
@@ -51,6 +164,10 @@ impl Scraper {
             // We didn't find a recipe in JSON :(
             self.un_parsed.push((url.clone(), document))
         }
+        std::fs::write(
+            "temp/scrape_history.json",
+            serde_json::to_string(&url_hist_obj)?,
+        )?;
         Ok(found)
     }
 }
