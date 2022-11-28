@@ -14,8 +14,52 @@ pub struct MixedRational {
 
 
 impl MixedRational {
+    pub fn from_string(s: String) -> (Self, Option<Self>) {
+        fn replace_unicode(s: String) -> String {
+            let mut new_s = s;
+            for (c, new) in "¼½¾⅐⅑⅒⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞".chars().zip(
+                ["1/4", "1/2", "3/4", "1/7", "1/9", "1/10", "1/3", "2/3", "1/5", 
+                 "2/5", "3/5", "4/5", "1/6", "5/6", "1/8",  "3/8", "5/8", "7/8"]) {
+                new_s = new_s.replace(c, &format!(" {}", new))
+            }
+            new_s
+        }
+        let valid = Self::valid_chars();
+        let mut txt = replace_unicode(s.to_lowercase().chars().filter(|x| valid.contains(*x) || valid.contains("to")).collect());
+        if let Some(period) = txt.find('.') {
+            let ( l,  r) = txt.split_at(period);
+            let value = l.replace(|c: char| !c.is_ascii_digit(), "");
+            let decimal = r.replace(|c: char| !c.is_ascii_digit(), "");
+            let dec_l = decimal.len() as u32;
+            return (MixedRational::new(value.parse::<i32>().unwrap(), decimal.parse::<i32>().unwrap(), 10u32.pow(dec_l)), None);
+        }
+        // Fix spaces :)
+        txt = txt.trim().split(' ')
+            .filter(|s| !s.is_empty())
+            .collect::<Vec<_>>()
+            .join(" ");
+        if txt.is_empty() {return (Self::default(), None)}
+        while txt.as_bytes()[0] == b' ' {
+            txt.remove(0);
+        }
+
+        let (a, b): (String, String) = if let Some(dash) = txt.find('-') {
+            let (a,b) = txt.split_at(dash);
+            (a.into(), b[1..].into())
+        } else if let Some(to) = txt.find("to") {
+            let (a,b) = txt.split_at(to);
+            (a.into(), b[2..].into())
+        } else {
+            (txt, "".into())
+        };
+        if let Some(f) = parse_fract(a) {
+            (f, parse_fract(b))
+        } else {
+            (MixedRational::whole(0), None)
+        }
+    }
     pub fn valid_chars() -> String {
-        "-1234567890 /¼½¾⅐⅑⅒⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞".into()
+        "-1234567890 /¼½¾⅐⅑⅒⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞.".into()
     }
     pub fn new(w: i32, n: i32, d: u32) -> Self {
         MixedRational {
@@ -183,46 +227,6 @@ pub fn parse_fract(txt: String) -> Option<MixedRational> {
     None
 }
 
-impl From<String> for MixedRational {
-    
-    fn from(s: String) -> Self {
-        fn replace_unicode(s: String) -> String {
-            let mut new_s = s;
-            for (c, new) in "¼½¾⅐⅑⅒⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞".chars().zip(
-                ["1/4", "1/2", "3/4", "1/7", "1/9", "1/10", "1/3", "2/3", "1/5", 
-                 "2/5", "3/5", "4/5", "1/6", "5/6", "1/8",  "3/8", "5/8", "7/8"]) {
-                new_s = new_s.replace(c, &format!(" {}", new))
-            }
-            new_s
-        }
-        let valid = Self::valid_chars();
-        let mut txt = replace_unicode(s.to_lowercase().chars().filter(|x| valid.contains(*x) || valid.contains("to")).collect());
-        
-        // Fix spaces :)
-        txt = txt.trim().split(' ')
-            .filter(|s| !s.is_empty())
-            .collect::<Vec<_>>()
-            .join(" ");
-        while txt.as_bytes()[0] == b' ' {
-            txt.remove(0);
-        }
-
-        let (a, _): (String, String) = if let Some(dash) = txt.find('-') {
-            let (a,b) = txt.split_at(dash);
-            (a.into(), b[1..].into())
-        } else if let Some(to) = txt.find("to") {
-            let (a,b) = txt.split_at(to);
-            (a.into(), b[2..].into())
-        } else {
-            (txt, "".into())
-        };
-        if let Some(f) = parse_fract(a) {
-            f
-        } else {
-            MixedRational::whole(0)
-        }
-    }
-} 
 
 impl From<i32> for MixedRational {
     fn from(v: i32) -> Self {

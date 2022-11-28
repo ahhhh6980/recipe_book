@@ -1,16 +1,18 @@
 use serde::{de::IntoDeserializer, ser::SerializeStruct};
 use serde_json::Value;
 
-use crate::{mixed_rational::MixedRational, MeasureType};
+use crate::{mixed_rational::MixedRational, Measure, MeasureType, Unit};
 use std::fmt;
 
 #[derive(Debug, Clone, Default, serde::Serialize, serde::Deserialize)]
 pub struct RecipeItem {
     #[serde(flatten)]
     pub measure: MeasureType,
+    pub measure_b: Option<MeasureType>,
     #[serde(serialize_with = "crate::proper_string_serialize")]
     pub name: String,
     pub note: Option<String>,
+    pub plural: bool,
 }
 
 #[derive(Clone, Default, Debug, serde::Serialize, serde::Deserialize)]
@@ -125,11 +127,25 @@ impl ParsedRecipe {
 
 impl std::fmt::Display for RecipeItem {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(
-            f,
-            "{} {} {}",
-            self.measure.count, self.measure.unit, self.name
-        )
+        let note = if let Some(n) = self.note.clone() {
+            format!(" ({})", n)
+        } else {
+            "".into()
+        };
+        let unit = if self.plural {
+            format!("{}s", self.measure.unit)
+        } else {
+            self.measure.unit.names[0].to_string()
+        };
+        if let Some(m) = self.measure_b {
+            write!(
+                f,
+                "{}-{} {} {}{}",
+                self.measure.count, m.count, unit, self.name, note
+            )
+        } else {
+            write!(f, "{} {} {}{}", self.measure.count, unit, self.name, note)
+        }
     }
 }
 
@@ -207,7 +223,9 @@ impl std::ops::Mul<MixedRational> for RecipeItem {
         RecipeItem {
             name: self.name,
             measure: self.measure * rhs,
+            measure_b: self.measure_b.map(|b| b * rhs),
             note: self.note,
+            plural: self.plural,
         }
     }
 }
@@ -225,25 +243,240 @@ impl std::ops::Mul<MixedRational> for RecipeData {
     }
 }
 // recipeIngredient
-/*
-impl From<serde_json::Value> for ParsedRecipe {
-    fn from(value: serde_json::Value) -> Self {
-        let ingredients_txt = if let Some(ingredients) = value["ingredients"].as_array() {
+fn remove_duplicate_chars(s: &str, chars: &[char]) -> String {
+    let mut s = s.to_string();
+    chars.iter().for_each(|c| {
+        s = s
+            .split(*c)
+            .filter(|s| !s.is_empty())
+            .collect::<Vec<_>>()
+            .join(&c.to_string())
+    });
+    s
+}
+impl From<(String, serde_json::Value)> for ParsedRecipe {
+    fn from((url, value): (String, serde_json::Value)) -> Self {
+        let ingredients_txt = if let Some(ingredients) = value["recipeIngredient"].as_array() {
             ingredients.iter().map(|v| v.to_string()).collect()
         } else {
-            value["ingredients"]
+            value["recipeIngredient"]
                 .to_string()
                 .split('\n')
                 .map(|s| s.to_string())
                 .collect::<Vec<String>>()
         };
+        // Init ingredients list
         let mut ingredients: Vec<RecipeItem> = Vec::new();
-        for ingredient_str in ingredients_txt {
-            let or = ingredient_str.find(pat)
-            let value_a = String::new();
-            let value_b = String::new();
-            let (a, b) = ingredient_str.split("or");
+        for mut ingredient_str in ingredients_txt {
+            // Remove duplicate spaces and parenthesis
+            ingredient_str = remove_duplicate_chars(ingredient_str.trim(), &[' ', '(', ')']);
+            println!("unfiltered text: {}", ingredient_str);
+            // Find where parenthesis are
+            let parens = (ingredient_str.find('('), ingredient_str.find(')'));
+            // Assemble a note if there are parenthesis
+            let note: String = if let (Some(left), Some(right)) = parens {
+                if ingredient_str.as_bytes()[left + 1] == b',' {
+                    "".into()
+                } else {
+                    let new = ingredient_str[left + 1..right].into();
+                    ingredient_str = ingredient_str[..left].into();
+                    new
+                }
+            } else {
+                "".into()
+            };
+            // Remove unnecessary characters
+            ingredient_str = ingredient_str.replace(['"', ',', ';', '(', ')'], "");
+            // Break if we have nothing >.>
+            if ingredient_str == "null" {
+                continue;
+            }
+            println!("filtered text: {}", ingredient_str);
+            /*
+                If the first few characters are not part of a rational, we dont need extra processing
+            */
+            let (first_rational_char, first_alpha) = (
+                ingredient_str.find(|c: char| MixedRational::valid_chars().contains(c)),
+                ingredient_str.find(|c: char| !MixedRational::valid_chars().contains(c)),
+            );
+            if let Some(rational_char) = first_rational_char {
+                if let Some(alpha) = first_alpha {
+                    if alpha < rational_char {
+                        println!("Processed: {}", ingredient_str);
+                        ingredients.push(RecipeItem {
+                            measure: MeasureType {
+                                count: 0.into(),
+                                unit: Measure {
+                                    unit: Unit::Other,
+                                    names: &[""],
+                                    fluid: false,
+                                },
+                            },
+                            measure_b: None,
+                            name: ingredient_str,
+                            note: None,
+                            plural: false,
+                        });
+                        println!();
+                        continue;
+                    }
+                }
+            }
+            // Just grab the first option if the recipe lists different alternatives
+            let ingredient = if let Some(or) = ingredient_str.find(" or ") {
+                ingredient_str.split_at(or).0.into()
+            } else {
+                ingredient_str
+            };
+            // Find the first non-rational character
+            let non_fract = ingredient.find(|c: char| c.is_alphabetic()).unwrap();
+            let (fract_str, unit_str) = ingredient.split_at(non_fract);
+            let (count, count_b) = MixedRational::from_string(fract_str.to_string());
+            let (name_str, unit_str): (String, String) = if let Some(space) = unit_str.find(' ') {
+                (
+                    unit_str[space + 1..].into(),
+                    // Ensure the unit name is letters only for lookup
+                    unit_str[..space]
+                        .replace(|c: char| !c.is_ascii_alphabetic(), "")
+                        .to_lowercase(),
+                )
+            } else {
+                ("".into(), unit_str.into())
+            };
+            // The actual struct for the unit, providing useful methods
+            let mut struct_unit = Measure::new(unit_str.clone());
+            let ingredient = if struct_unit.unit as u8 == Unit::Other as u8 {
+                struct_unit.names = &[""];
+                // Concatenate unit and name as there is no actual unit here
+                let mut unit = unit_str;
+                unit.push(' ');
+                unit.push_str(&name_str);
+                RecipeItem {
+                    measure: MeasureType {
+                        count,
+                        unit: struct_unit,
+                    },
+                    // If the recipe specifies a range, this is the upper limit
+                    // ex: 2-3 oz of cream cheese
+                    measure_b: count_b.map(|m| MeasureType {
+                        count: m,
+                        unit: struct_unit,
+                    }),
+                    name: unit,
+                    note: if note.is_empty() { None } else { Some(note) },
+                    plural: false,
+                }
+            } else {
+                RecipeItem {
+                    measure: MeasureType {
+                        count,
+                        unit: struct_unit,
+                    },
+                    // If the recipe specifies a range, this is the upper limit
+                    // ex: 2-3 oz of cream cheese
+                    measure_b: count_b.map(|m| MeasureType {
+                        count: m,
+                        unit: struct_unit,
+                    }),
+                    name: name_str,
+                    note: if note.is_empty() { None } else { Some(note) },
+                    plural: unit_str.ends_with("'s") || unit_str.ends_with('s'),
+                }
+            };
+            println!("P: {}", ingredient);
+            ingredients.push(ingredient);
+            println!()
+            //let range = ingredient.find('-');
         }
-        Self::default()
+        let mut nutrition_info = Vec::new();
+        // "servingSize",
+        for field in [
+            "calories",
+            "carbohydrateContent",
+            "proteinContent",
+            "fatContent",
+            "saturatedFatContent",
+            "transFatContent",
+            "cholesterolContent",
+            "sodiumContent",
+            "fiberContent",
+            "sugarContent",
+            "unsaturatedFatContent",
+        ]
+        .iter()
+        {
+            let val = value["nutrition"][field].to_string();
+            if let Some(space) = val.find(' ') {
+                let (whole, unit) = val.split_at(space);
+                if let Ok(v) = whole.replace(|c: char| !c.is_numeric(), "").parse::<i32>() {
+                    nutrition_info.push(RecipeItem {
+                        measure: MeasureType {
+                            count: MixedRational::whole(v),
+                            unit: Measure::new(unit.replace(' ', "")),
+                        },
+                        measure_b: None,
+                        name: String::from(*field),
+                        note: None,
+                        plural: false,
+                    });
+                }
+            }
+        }
+        let mut new = Self::default();
+        new.data.ingredients = ingredients;
+        new.data.nutrition_info = NutritionInfo {
+            servings_size: MixedRational::default(),
+            servings_unit: "".into(),
+            nutrients: nutrition_info,
+        };
+        new.data.directions = if let Some(directions) = value["recipeInstructions"].as_array() {
+            directions.iter().map(|v| v["text"].to_string()).collect()
+        } else {
+            Vec::new()
+        };
+        new.text.author_name = value["author"]["name"].to_string();
+        new.text.description = value["description"].to_string();
+        new.text.title = value["name"].to_string();
+        new.text.origin = url;
+        println!("{}", new);
+        /*
+        "recipeYield": [
+                        "16",
+                        "16 slices"
+                    ],
+        */
+        /*
+            "keywords": [
+            "breakfast",
+            "butter",
+            "onion",
+            "cream",
+            "sour cream",
+            "pepper",
+            "garlic",
+            "cheddar",
+            "side",
+            "potato",
+            "brunch",
+            "dinner",
+            "thanksgiving",
+            "easter",
+            "christmas",
+            "web"
+        ],
+            */
+
+        //"cookTime": "25 minutes",
+        /*
+        {
+                "name": "Calories",
+                "count": {
+                    "value": 242
+                },
+                "unit": "kcal",
+                "plural": true
+            },
+        */
+        new
     }
-}*/
+}

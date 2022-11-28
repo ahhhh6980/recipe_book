@@ -1,1 +1,341 @@
-{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://amandascookin.com/million-dollar-chicken-casserole/#article","isPartOf":{"@id":"https://amandascookin.com/million-dollar-chicken-casserole/"},"author":{"name":"Amanda Formaro","@id":"https://amandascookin.com/#/schema/person/7a41365cd5694a6c38a3d73187f251e2"},"headline":"Million Dollar Chicken Casserole","datePublished":"2021-12-28T12:00:00+00:00","dateModified":"2022-07-22T17:08:10+00:00","wordCount":654,"commentCount":85,"publisher":{"@id":"https://amandascookin.com/#organization"},"image":{"@id":"https://amandascookin.com/million-dollar-chicken-casserole/#primaryimage"},"thumbnailUrl":"https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ.jpg","keywords":["chicken breasts","cream cheese","fall","winter"],"articleSection":["Casseroles","Chicken &amp; Poultry"],"inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://amandascookin.com/million-dollar-chicken-casserole/#respond"]}]},{"@type":["WebPage","FAQPage"],"@id":"https://amandascookin.com/million-dollar-chicken-casserole/","url":"https://amandascookin.com/million-dollar-chicken-casserole/","name":"Million Dollar Chicken Casserole - Amanda&#039;s Cookin&#039; - Casseroles","isPartOf":{"@id":"https://amandascookin.com/#website"},"primaryImageOfPage":{"@id":"https://amandascookin.com/million-dollar-chicken-casserole/#primaryimage"},"image":{"@id":"https://amandascookin.com/million-dollar-chicken-casserole/#primaryimage"},"thumbnailUrl":"https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ.jpg","datePublished":"2021-12-28T12:00:00+00:00","dateModified":"2022-07-22T17:08:10+00:00","description":"Million dollar chicken casserole is an easy, creamy, and comforting meal that's topped with buttery Ritz cracker crumbs.","breadcrumb":{"@id":"https://amandascookin.com/million-dollar-chicken-casserole/#breadcrumb"},"mainEntity":[{"@id":"https://amandascookin.com/million-dollar-chicken-casserole/#faq-question-1604676576862"},{"@id":"https://amandascookin.com/million-dollar-chicken-casserole/#faq-question-1640665039348"}],"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://amandascookin.com/million-dollar-chicken-casserole/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://amandascookin.com/million-dollar-chicken-casserole/#primaryimage","url":"https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ.jpg","contentUrl":"https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ.jpg","width":1400,"height":1400,"caption":"Million Dollar Chicken Casserole"},{"@type":"BreadcrumbList","@id":"https://amandascookin.com/million-dollar-chicken-casserole/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Recipes","item":"https://amandascookin.com/category/recipes/"},{"@type":"ListItem","position":2,"name":"Dinners","item":"https://amandascookin.com/category/recipes/dinner/"},{"@type":"ListItem","position":3,"name":"Casseroles","item":"https://amandascookin.com/category/recipes/dinner/casseroles/"},{"@type":"ListItem","position":4,"name":"Million Dollar Chicken Casserole"}]},{"@type":"WebSite","@id":"https://amandascookin.com/#website","url":"https://amandascookin.com/","name":"Amanda&#039;s Cookin&#039;","description":"Delicious recipes and easy desserts!","publisher":{"@id":"https://amandascookin.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://amandascookin.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://amandascookin.com/#organization","name":"Amanda's Cookin'","url":"https://amandascookin.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://amandascookin.com/#/schema/logo/image/","url":"https://amandascookin.com/wp-content/uploads/2019/04/logo-ACL-900.jpg","contentUrl":"https://amandascookin.com/wp-content/uploads/2019/04/logo-ACL-900.jpg","width":900,"height":424,"caption":"Amanda's Cookin'"},"image":{"@id":"https://amandascookin.com/#/schema/logo/image/"},"sameAs":["http://instagram.com/amandaformaro","http://www.linkedin.com/profile/view?id=23565941&amp;amp;amp;trk=tab_pro","http://pinterest.com/amandaformaro/","http://www.youtube.com/user/amandascookin?feature=mhum","http://www.facebook.com/AmandasCookin","https://twitter.com/amandaformaro"]},{"@type":"Person","@id":"https://amandascookin.com/#/schema/person/7a41365cd5694a6c38a3d73187f251e2","name":"Amanda Formaro","description":"Amanda Formaro is the crafty, entrepreneurial mother of four grown children. She loves to bake, cook, make kid's crafts and create decorative items for her home. She is a crafting expert and guru in the kitchen and has appeared online and in print publications many times over the years. She is also a craft book author five times over and product developer as well as the owner of FunFamilyCrafts.com. You can find her on social media by using the buttons to the left!","sameAs":["https://amandascookin.com/about/","https://www.facebook.com/AmandasCookin","http://instagram.com/amandaformaro","http://pinterest.com/amandaformaro","https://twitter.com/amandaformaro","http://www.youtube.com/user/amandascookin?feature=mhum"],"url":"https://amandascookin.com/author/amanda-formaro/"},{"@type":"Question","@id":"https://amandascookin.com/million-dollar-chicken-casserole/#faq-question-1604676576862","position":1,"url":"https://amandascookin.com/million-dollar-chicken-casserole/#faq-question-1604676576862","name":"Can I freeze it?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Yes, million dollar chicken casserole freezes well. To do so, follow the instructions through step 4 (before adding the crackers) and store with an air-tight lid or tightly wrapped with plastic wrap followed by aluminum foil in the freezer for up to 4 months. Thaw overnight in the refrigerator. Bake as normal, but covered with foil. You may need to add a few minutes since the dish is going into the oven cold.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@type":"Question","@id":"https://amandascookin.com/million-dollar-chicken-casserole/#faq-question-1640665039348","position":2,"url":"https://amandascookin.com/million-dollar-chicken-casserole/#faq-question-1640665039348","name":"How do I store it and how long does it last?","answerCount":1,"acceptedAnswer":{"@type":"Answer","text":"Store with an air-tight lid or tightly wrapped with plastic wrap in the refrigerator for 3-4 days. Reheat in the microwave.","inLanguage":"en-US"},"inLanguage":"en-US"},{"@context":"http://schema.org/","@type":"Recipe","name":"Million Dollar Chicken Casserole","author":{"@type":"Person","name":"Amanda Formaro"},"description":"This chicken casserole isn&#039;t complete without the crisp crumbled Ritz crackers on top for the perfect creamy-crunch ratio.","datePublished":"2021-12-28T06:00:00+00:00","image":["https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ.jpg","https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ-500x500.jpg","https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ-500x375.jpg","https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ-480x270.jpg"],"video":{"name":"Million Dollar Chicken Casserole","description":"This chicken casserole isn't complete without the crisp crumbled Ritz crackers on top for the perfect creamy-crunch ratio.","thumbnailUrl":"https://mediavine-res.cloudinary.com/image/upload/s--vKjrfYP4--/c_limit,f_auto,fl_lossy,h_1080,q_auto,w_1920/v1643046483/mmdmn2ff2a05d22tkzjb.jpg","embedUrl":"https://video.mediavine.com/videos/b9owqueaq6utaooxfah6.js","contentUrl":"https://mediavine-res.cloudinary.com/video/upload/t_original/v1643046383/b9owqueaq6utaooxfah6.mp4","uploadDate":"2022-01-24T17:48:08+00:00","duration":"PT70S","@type":"VideoObject"},"recipeYield":["6","6 servings"],"prepTime":"PT10M","cookTime":"PT40M","totalTime":"PT50M","recipeIngredient":["4 cups chicken (cooked and shredded - roughly 1 1/2 lbs of boneless chicken breasts)","4 oz cream cheese (softened at room temperature)","1 cup cottage cheese","1/2 cup sour cream","10.75 oz cream of chicken soup","1/2 tsp garlic powder","1/2 tsp onion powder","32  Ritz crackers (1 sleeve)","4 Tbsp unsalted butter (melted)"],"recipeInstructions":[{"@type":"HowToStep","text":"Preheat the oven to 350F.","name":"Preheat the oven to 350F.","url":"https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-0"},{"@type":"HowToStep","text":"Shred the cooked chicken into bite-sized pieces.","name":"Shred the cooked chicken into bite-sized pieces.","url":"https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-1"},{"@type":"HowToStep","text":"In a large bowl combine the cream cheese, cottage cheese, sour cream, cream of chicken soup, and seasoning. Mix well.","name":"In a large bowl combine the cream cheese, cottage cheese, sour cream, cream of chicken soup, and seasoning. Mix well.","url":"https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-2"},{"@type":"HowToStep","text":"To the same bowl add the chicken and stir to coat well. Pour into a 9x9 casserole dish.","name":"To the same bowl add the chicken and stir to coat well. Pour into a 9x9 casserole dish.","url":"https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-3"},{"@type":"HowToStep","text":"In a separate medium bowl add a sleeve of Ritz crackers and crush into small bits. Pour in the melted butter and toss to coat the crackers.","name":"In a separate medium bowl add a sleeve of Ritz crackers and crush into small bits. Pour in the melted butter and toss to coat the crackers.","url":"https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-4"},{"@type":"HowToStep","text":"Top the casserole with the Ritz crackers.","name":"Top the casserole with the Ritz crackers.","url":"https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-5"},{"@type":"HowToStep","text":"Bake uncovered for 40 minutes. Garnish with parsley if desired.","name":"Bake uncovered for 40 minutes. Garnish with parsley if desired.","url":"https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-6"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.95","ratingCount":"630"},"recipeCategory":["Dinner"],"recipeCuisine":["American"],"keywords":"chicken casserole with Ritz, creamy chicken casserole, million dollar chicken casserole","nutrition":{"@type":"NutritionInformation","servingSize":"1 serving (1 cup)","calories":"443 kcal","carbohydrateContent":"17 g","proteinContent":"29 g","fatContent":"29 g","saturatedFatContent":"14 g","transFatContent":"1 g","cholesterolContent":"125 mg","sodiumContent":"818 mg","fiberContent":"1 g","sugarContent":"4 g","unsaturatedFatContent":"11 g"},"@id":"https://amandascookin.com/million-dollar-chicken-casserole/#recipe","isPartOf":{"@id":"https://amandascookin.com/million-dollar-chicken-casserole/#article"},"mainEntityOfPage":"https://amandascookin.com/million-dollar-chicken-casserole/"}]}
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "@id": "https://amandascookin.com/million-dollar-chicken-casserole/#article",
+            "isPartOf": {
+                "@id": "https://amandascookin.com/million-dollar-chicken-casserole/"
+            },
+            "author": {
+                "name": "Amanda Formaro",
+                "@id": "https://amandascookin.com/#/schema/person/7a41365cd5694a6c38a3d73187f251e2"
+            },
+            "headline": "Million Dollar Chicken Casserole",
+            "datePublished": "2021-12-28T12:00:00+00:00",
+            "dateModified": "2022-07-22T17:08:10+00:00",
+            "wordCount": 654,
+            "commentCount": 85,
+            "publisher": {
+                "@id": "https://amandascookin.com/#organization"
+            },
+            "image": {
+                "@id": "https://amandascookin.com/million-dollar-chicken-casserole/#primaryimage"
+            },
+            "thumbnailUrl": "https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ.jpg",
+            "keywords": [
+                "chicken breasts",
+                "cream cheese",
+                "fall",
+                "winter"
+            ],
+            "articleSection": [
+                "Casseroles",
+                "Chicken &amp; Poultry"
+            ],
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "CommentAction",
+                    "name": "Comment",
+                    "target": [
+                        "https://amandascookin.com/million-dollar-chicken-casserole/#respond"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": [
+                "WebPage",
+                "FAQPage"
+            ],
+            "@id": "https://amandascookin.com/million-dollar-chicken-casserole/",
+            "url": "https://amandascookin.com/million-dollar-chicken-casserole/",
+            "name": "Million Dollar Chicken Casserole - Amanda&#039;s Cookin&#039; - Casseroles",
+            "isPartOf": {
+                "@id": "https://amandascookin.com/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https://amandascookin.com/million-dollar-chicken-casserole/#primaryimage"
+            },
+            "image": {
+                "@id": "https://amandascookin.com/million-dollar-chicken-casserole/#primaryimage"
+            },
+            "thumbnailUrl": "https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ.jpg",
+            "datePublished": "2021-12-28T12:00:00+00:00",
+            "dateModified": "2022-07-22T17:08:10+00:00",
+            "description": "Million dollar chicken casserole is an easy, creamy, and comforting meal that's topped with buttery Ritz cracker crumbs.",
+            "breadcrumb": {
+                "@id": "https://amandascookin.com/million-dollar-chicken-casserole/#breadcrumb"
+            },
+            "mainEntity": [
+                {
+                    "@id": "https://amandascookin.com/million-dollar-chicken-casserole/#faq-question-1604676576862"
+                },
+                {
+                    "@id": "https://amandascookin.com/million-dollar-chicken-casserole/#faq-question-1640665039348"
+                }
+            ],
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "ReadAction",
+                    "target": [
+                        "https://amandascookin.com/million-dollar-chicken-casserole/"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://amandascookin.com/million-dollar-chicken-casserole/#primaryimage",
+            "url": "https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ.jpg",
+            "contentUrl": "https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ.jpg",
+            "width": 1400,
+            "height": 1400,
+            "caption": "Million Dollar Chicken Casserole"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://amandascookin.com/million-dollar-chicken-casserole/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Recipes",
+                    "item": "https://amandascookin.com/category/recipes/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Dinners",
+                    "item": "https://amandascookin.com/category/recipes/dinner/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Casseroles",
+                    "item": "https://amandascookin.com/category/recipes/dinner/casseroles/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Million Dollar Chicken Casserole"
+                }
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://amandascookin.com/#website",
+            "url": "https://amandascookin.com/",
+            "name": "Amanda&#039;s Cookin&#039;",
+            "description": "Delicious recipes and easy desserts!",
+            "publisher": {
+                "@id": "https://amandascookin.com/#organization"
+            },
+            "potentialAction": [
+                {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://amandascookin.com/?s={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            ],
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://amandascookin.com/#organization",
+            "name": "Amanda's Cookin'",
+            "url": "https://amandascookin.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "inLanguage": "en-US",
+                "@id": "https://amandascookin.com/#/schema/logo/image/",
+                "url": "https://amandascookin.com/wp-content/uploads/2019/04/logo-ACL-900.jpg",
+                "contentUrl": "https://amandascookin.com/wp-content/uploads/2019/04/logo-ACL-900.jpg",
+                "width": 900,
+                "height": 424,
+                "caption": "Amanda's Cookin'"
+            },
+            "image": {
+                "@id": "https://amandascookin.com/#/schema/logo/image/"
+            },
+            "sameAs": [
+                "http://instagram.com/amandaformaro",
+                "http://www.linkedin.com/profile/view?id=23565941&amp;amp;amp;trk=tab_pro",
+                "http://pinterest.com/amandaformaro/",
+                "http://www.youtube.com/user/amandascookin?feature=mhum",
+                "http://www.facebook.com/AmandasCookin",
+                "https://twitter.com/amandaformaro"
+            ]
+        },
+        {
+            "@type": "Person",
+            "@id": "https://amandascookin.com/#/schema/person/7a41365cd5694a6c38a3d73187f251e2",
+            "name": "Amanda Formaro",
+            "description": "Amanda Formaro is the crafty, entrepreneurial mother of four grown children. She loves to bake, cook, make kid's crafts and create decorative items for her home. She is a crafting expert and guru in the kitchen and has appeared online and in print publications many times over the years. She is also a craft book author five times over and product developer as well as the owner of FunFamilyCrafts.com. You can find her on social media by using the buttons to the left!",
+            "sameAs": [
+                "https://amandascookin.com/about/",
+                "https://www.facebook.com/AmandasCookin",
+                "http://instagram.com/amandaformaro",
+                "http://pinterest.com/amandaformaro",
+                "https://twitter.com/amandaformaro",
+                "http://www.youtube.com/user/amandascookin?feature=mhum"
+            ],
+            "url": "https://amandascookin.com/author/amanda-formaro/"
+        },
+        {
+            "@type": "Question",
+            "@id": "https://amandascookin.com/million-dollar-chicken-casserole/#faq-question-1604676576862",
+            "position": 1,
+            "url": "https://amandascookin.com/million-dollar-chicken-casserole/#faq-question-1604676576862",
+            "name": "Can I freeze it?",
+            "answerCount": 1,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, million dollar chicken casserole freezes well. To do so, follow the instructions through step 4 (before adding the crackers) and store with an air-tight lid or tightly wrapped with plastic wrap followed by aluminum foil in the freezer for up to 4 months. Thaw overnight in the refrigerator. Bake as normal, but covered with foil. You may need to add a few minutes since the dish is going into the oven cold.",
+                "inLanguage": "en-US"
+            },
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "Question",
+            "@id": "https://amandascookin.com/million-dollar-chicken-casserole/#faq-question-1640665039348",
+            "position": 2,
+            "url": "https://amandascookin.com/million-dollar-chicken-casserole/#faq-question-1640665039348",
+            "name": "How do I store it and how long does it last?",
+            "answerCount": 1,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Store with an air-tight lid or tightly wrapped with plastic wrap in the refrigerator for 3-4 days. Reheat in the microwave.",
+                "inLanguage": "en-US"
+            },
+            "inLanguage": "en-US"
+        },
+        {
+            "@context": "http://schema.org/",
+            "@type": "Recipe",
+            "name": "Million Dollar Chicken Casserole",
+            "author": {
+                "@type": "Person",
+                "name": "Amanda Formaro"
+            },
+            "description": "This chicken casserole isn&#039;t complete without the crisp crumbled Ritz crackers on top for the perfect creamy-crunch ratio.",
+            "datePublished": "2021-12-28T06:00:00+00:00",
+            "image": [
+                "https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ.jpg",
+                "https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ-500x500.jpg",
+                "https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ-500x375.jpg",
+                "https://amandascookin.com/wp-content/uploads/2021/12/Million-Dollar-Chicken-Casserole-RC-SQ-480x270.jpg"
+            ],
+            "video": {
+                "name": "Million Dollar Chicken Casserole",
+                "description": "This chicken casserole isn't complete without the crisp crumbled Ritz crackers on top for the perfect creamy-crunch ratio.",
+                "thumbnailUrl": "https://mediavine-res.cloudinary.com/image/upload/s--vKjrfYP4--/c_limit,f_auto,fl_lossy,h_1080,q_auto,w_1920/v1643046483/mmdmn2ff2a05d22tkzjb.jpg",
+                "embedUrl": "https://video.mediavine.com/videos/b9owqueaq6utaooxfah6.js",
+                "contentUrl": "https://mediavine-res.cloudinary.com/video/upload/t_original/v1643046383/b9owqueaq6utaooxfah6.mp4",
+                "uploadDate": "2022-01-24T17:48:08+00:00",
+                "duration": "PT70S",
+                "@type": "VideoObject"
+            },
+            "recipeYield": [
+                "6",
+                "6 servings"
+            ],
+            "prepTime": "PT10M",
+            "cookTime": "PT40M",
+            "totalTime": "PT50M",
+            "recipeIngredient": [
+                "4 cups chicken (cooked and shredded - roughly 1 1/2 lbs of boneless chicken breasts)",
+                "4 oz cream cheese (softened at room temperature)",
+                "1 cup cottage cheese",
+                "1/2 cup sour cream",
+                "10.75 oz cream of chicken soup",
+                "1/2 tsp garlic powder",
+                "1/2 tsp onion powder",
+                "32  Ritz crackers (1 sleeve)",
+                "4 Tbsp unsalted butter (melted)"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Preheat the oven to 350F.",
+                    "name": "Preheat the oven to 350F.",
+                    "url": "https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-0"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Shred the cooked chicken into bite-sized pieces.",
+                    "name": "Shred the cooked chicken into bite-sized pieces.",
+                    "url": "https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-1"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "In a large bowl combine the cream cheese, cottage cheese, sour cream, cream of chicken soup, and seasoning. Mix well.",
+                    "name": "In a large bowl combine the cream cheese, cottage cheese, sour cream, cream of chicken soup, and seasoning. Mix well.",
+                    "url": "https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-2"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "To the same bowl add the chicken and stir to coat well. Pour into a 9x9 casserole dish.",
+                    "name": "To the same bowl add the chicken and stir to coat well. Pour into a 9x9 casserole dish.",
+                    "url": "https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-3"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "In a separate medium bowl add a sleeve of Ritz crackers and crush into small bits. Pour in the melted butter and toss to coat the crackers.",
+                    "name": "In a separate medium bowl add a sleeve of Ritz crackers and crush into small bits. Pour in the melted butter and toss to coat the crackers.",
+                    "url": "https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-4"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Top the casserole with the Ritz crackers.",
+                    "name": "Top the casserole with the Ritz crackers.",
+                    "url": "https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-5"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Bake uncovered for 40 minutes. Garnish with parsley if desired.",
+                    "name": "Bake uncovered for 40 minutes. Garnish with parsley if desired.",
+                    "url": "https://amandascookin.com/million-dollar-chicken-casserole/#wprm-recipe-66683-step-0-6"
+                }
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.95",
+                "ratingCount": "634"
+            },
+            "recipeCategory": [
+                "Dinner"
+            ],
+            "recipeCuisine": [
+                "American"
+            ],
+            "keywords": "chicken casserole with Ritz, creamy chicken casserole, million dollar chicken casserole",
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "servingSize": "1 serving (1 cup)",
+                "calories": "443 kcal",
+                "carbohydrateContent": "17 g",
+                "proteinContent": "29 g",
+                "fatContent": "29 g",
+                "saturatedFatContent": "14 g",
+                "transFatContent": "1 g",
+                "cholesterolContent": "125 mg",
+                "sodiumContent": "818 mg",
+                "fiberContent": "1 g",
+                "sugarContent": "4 g",
+                "unsaturatedFatContent": "11 g"
+            },
+            "@id": "https://amandascookin.com/million-dollar-chicken-casserole/#recipe",
+            "isPartOf": {
+                "@id": "https://amandascookin.com/million-dollar-chicken-casserole/#article"
+            },
+            "mainEntityOfPage": "https://amandascookin.com/million-dollar-chicken-casserole/"
+        }
+    ]
+}

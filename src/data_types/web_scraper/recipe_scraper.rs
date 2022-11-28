@@ -1,4 +1,4 @@
-use crate::get_time_string;
+use crate::{get_time_string, ParsedRecipe};
 use reqwest::header::Iter;
 use serde::de::IntoDeserializer;
 
@@ -69,9 +69,7 @@ impl Scraper {
     ) -> std::result::Result<Vec<usize>, Box<dyn std::error::Error>> {
         let mut url_hist_obj = UrlHistory::from_file("temp/scrape_history.json")?;
         let url_history = url_hist_obj.get_grabbed();
-        for url in &url_history {
-            println!("{}", url);
-        }
+
         let mut found = Vec::new();
         for (i, url) in urls.iter().enumerate() {
             if url_history.contains(url) {
@@ -89,6 +87,7 @@ impl Scraper {
                This should work for any recipe that google can display in blocks
                    when looking for recipes :D
             */
+            let mut foundf = false;
             for node in tree.nodes() {
                 let value = node.value();
                 if value.is_text() {
@@ -98,6 +97,7 @@ impl Scraper {
                     // Some edge cases, WIP
                     if (lower.contains(r#""@type""#)
                         && (lower.contains(r#""recipe""#) || lower.contains(r#"["recipe""#)))
+                        && (txt.contains("Instructions"))
                         && lower.len() < char_count_limit
                     {
                         // Ensure the string starts and ends with curly braces :)
@@ -129,12 +129,14 @@ impl Scraper {
                                     )?;
                                     self.json.push(item.clone());
                                     found.push(i);
-                                    url_hist_obj.grabbed_json_history.push(UrlHistoryItem {
+                                    foundf = true;
+                                    /*url_hist_obj.grabbed_json_history.push(UrlHistoryItem {
                                         time: get_time_string(),
                                         url: url.clone(),
                                         name: item["name"].to_string().replace('"', ""),
                                         processed: false,
-                                    })
+                                    });*/
+                                    let test = ParsedRecipe::from((url.clone(), item.clone()));
                                 }
                             }
                         } else {
@@ -147,13 +149,14 @@ impl Scraper {
                                 &txt,
                             )?;
                             self.json.push(json.clone());
-                            found.push(i);
-                            url_hist_obj.grabbed_json_history.push(UrlHistoryItem {
-                                time: get_time_string(),
-                                url: url.clone(),
-                                name: json["name"].to_string().replace('"', ""),
-                                processed: false,
-                            })
+                            foundf = true;
+                            found.push(i); /*
+                                           url_hist_obj.grabbed_json_history.push(UrlHistoryItem {
+                                               time: get_time_string(),
+                                               url: url.clone(),
+                                               name: json["name"].to_string().replace('"', ""),
+                                               processed: false,
+                                           }); */
                         }
                         // Parse to JSON and push to structs list of JSON
 
@@ -161,8 +164,16 @@ impl Scraper {
                     }
                 }
             }
-            // We didn't find a recipe in JSON :(
-            self.un_parsed.push((url.clone(), document))
+            if !foundf {
+                // We didn't find a recipe in JSON :(
+                self.un_parsed.push((url.clone(), document));
+                url_hist_obj.skipped.push(UrlHistoryItem {
+                    time: get_time_string(),
+                    url: url.clone(),
+                    name: url.clone(),
+                    processed: false,
+                });
+            }
         }
         std::fs::write(
             "temp/scrape_history.json",

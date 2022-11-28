@@ -269,14 +269,20 @@ pub const STANDARD_COOKING_MEASUREMENT_UNITS: &[Measure] = &[
 ];
 
 impl Measure {
-    pub fn new(name: String) -> Self {
+    pub fn new(mut name: String) -> Self {
         if !name.is_empty() {
             for i in 0..5 {
                 for m in STANDARD_COOKING_MEASUREMENT_UNITS {
                     if i >= m.names.len() {
                         break;
                     }
-                    if name.contains(m.names[i]) {
+                    if name.ends_with("'s") {
+                        name = name.replace("'s", "");
+                    }
+                    if name.ends_with('s') {
+                        name = name[..name.len() - 1].into();
+                    }
+                    if name == m.names[i] {
                         return *m;
                     }
                 }

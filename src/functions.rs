@@ -40,7 +40,7 @@ pub fn recursive_json_grab(
                     entry.path().file_name().unwrap().to_string_lossy()
                 );
                 // Read as string so that serde_json can parse it
-                if let Ok(recipe) = ParsedRecipe::from_path("test.json") {
+                if let Ok(recipe) = ParsedRecipe::from_path(entry.path()) {
                     // Print name of recipe and then push to our recipes list
                     println!(
                         "{} Recipe Name: {}",

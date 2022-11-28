@@ -17,19 +17,19 @@ fn main() -> core::result::Result<(), Box<dyn Error>> {
     println!("size: {}", recipe_data[0].memory_size());
 
     let urls: Vec<String> = vec![
-    "https://www.spendwithpennies.com/homemade-carrot-bread//".into(),
-    "https://amandascookin.com/million-dollar-chicken-casserole/".into(),
-    "https://www.simplyrecipes.com/instant-pot-turkey-breast-and-gravy-recipe-5207290".into(),
-    "https://www.epicurious.com/recipes/food/views/hash-brown-casserole".into(),
-    "https://www.averiecooks.com/garlic-butter-chicken/".into(),
-    "https://themodernproper.com/lemon-chicken".into(),
-    "https://cafedelites.com/quick-easy-creamy-herb-chicken/".into(),
-    "https://www.aheadofthyme.com/roasted-spatchcock-chicken-butterflied-chicken/".into(),
-    "https://www.foodiecrush.com/thai-chicken-cucumber-salad/".into(),
-    "https://littlesunnykitchen.com/marry-me-chicken/".into(),
-    "https://www.eatwell101.com/garlic-butter-chicken-bites-asparagus-recipe".into(),
-    "https://www.ethanchlebowski.com/cooking-techniques-recipes/homemade-in-n-out-double-double-amp-animal-style-fries".into(),
-    "https://www.simplyrecipes.com/recipes/smothered_turkey_wings/".into(),
+        "https://www.spendwithpennies.com/homemade-carrot-bread//".into(),
+        //"https://amandascookin.com/million-dollar-chicken-casserole/".into(),
+        //"https://www.simplyrecipes.com/instant-pot-turkey-breast-and-gravy-recipe-5207290".into(),
+        //"https://www.epicurious.com/recipes/food/views/hash-brown-casserole".into(),
+        //"https://www.averiecooks.com/garlic-butter-chicken/".into(),
+        //"https://themodernproper.com/lemon-chicken".into(),
+        //"https://cafedelites.com/quick-easy-creamy-herb-chicken/".into(),
+        //"https://www.aheadofthyme.com/roasted-spatchcock-chicken-butterflied-chicken/".into(),
+        //"https://www.foodiecrush.com/thai-chicken-cucumber-salad/".into(),
+        //"https://littlesunnykitchen.com/marry-me-chicken/".into(),
+        //"https://www.eatwell101.com/garlic-butter-chicken-bites-asparagus-recipe".into(),
+        //"https://www.ethanchlebowski.com/cooking-techniques-recipes/homemade-in-n-out-double-double-amp-animal-style-fries".into(),
+        //"https://www.simplyrecipes.com/recipes/smothered_turkey_wings/".into(),
     ];
 
     let mut scraper = Scraper::default();

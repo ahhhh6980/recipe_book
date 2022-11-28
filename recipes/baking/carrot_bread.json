@@ -17,14 +17,16 @@
             "count": {
                 "value": 2
             },
-            "unit": "cup"
+            "unit": "cup",
+            "plural": true
         },
         {
             "name": "sugar",
             "count": {
                 "value": 1
             },
-            "unit": "cup"
+            "unit": "cup",
+            "plural": false
         },
         {
             "name": "baking soda",
@@ -33,7 +35,8 @@
                 "num": 1,
                 "den": 2
             },
-            "unit": "tsp"
+            "unit": "tsp",
+            "plural": false
         },
         {
             "name": "cinnamon",
@@ -42,14 +45,16 @@
                 "num": 1,
                 "den": 2
             },
-            "unit": "tsp"
+            "unit": "tsp",
+            "plural": false
         },
         {
             "name": "salt",
             "count": {
                 "value": 1
             },
-            "unit": "tsp"
+            "unit": "tsp",
+            "plural": false
         },
         {
             "name": "pumpkin pie spice",
@@ -57,7 +62,8 @@
                 "num": 1,
                 "den": 2
             },
-            "unit": "tsp"
+            "unit": "tsp",
+            "plural": false
         },
         {
             "name": "grated carrots",
@@ -66,14 +72,16 @@
                 "num": 1,
                 "den": 2
             },
-            "unit": "cup"
+            "unit": "cup",
+            "plural": true
         },
         {
             "name": "eggs",
             "count": {
                 "value": 3
             },
-            "unit": ""
+            "unit": "",
+            "plural": false
         },
         {
             "name": "vegetable oil",
@@ -81,7 +89,8 @@
                 "num": 3,
                 "den": 4
             },
-            "unit": "cup"
+            "unit": "cup",
+            "plural": false
         },
         {
             "name": "milk",
@@ -89,14 +98,16 @@
                 "num": 1,
                 "den": 4
             },
-            "unit": "cup"
+            "unit": "cup",
+            "plural": false
         },
         {
             "name": "vanilla",
             "count": {
                 "value": 1
             },
-            "unit": "tsp"
+            "unit": "tsp",
+            "plural": false
         },
         {
             "name": "walnut",
@@ -104,7 +115,8 @@
                 "num": 3,
                 "den": 4
             },
-            "unit": "cup"
+            "unit": "cup",
+            "plural": false
         }
     ],
     "directions": [
@@ -125,63 +137,72 @@
                 "count": {
                     "value": 242
                 },
-                "unit": "liter"
+                "unit": "kcal",
+                "plural": true
             },
             {
                 "name": "Carbohydrates",
                 "count": {
                     "value": 25
                 },
-                "unit": "g"
+                "unit": "g",
+                "plural": true
             },
             {
                 "name": "Protein",
                 "count": {
                     "value": 3
                 },
-                "unit": "g"
+                "unit": "g",
+                "plural": true
             },
             {
                 "name": "Fat",
                 "count": {
                     "value": 15
                 },
-                "unit": "g"
+                "unit": "g",
+                "plural": true
             },
             {
                 "name": "Saturated Fat",
                 "count": {
                     "value": 9
                 },
-                "unit": "g"
+                "unit": "g",
+                "plural": true
             },
             {
                 "name": "Cholesterol",
                 "count": {
                     "value": 31
                 },
-                "unit": "mg"
+                "unit": "mg",
+                "plural": true
             },
             {
                 "name": "Sodium",
                 "count": {
                     "value": 158
                 },
-                "unit": "mg"
+                "unit": "mg",
+                "plural": true
             },
             {
                 "name": "Fiber",
                 "count": {
                     "value": 1
                 },
-                "unit": "g"
+                "unit": "g",
+                "plural": false
             },
             {
                 "name": "Sugar",
                 "count": {
                     "value": 13
                 },
-                "unit": "g"
+                "unit": "g",
+                "plural": true
             }
         ]
     }
