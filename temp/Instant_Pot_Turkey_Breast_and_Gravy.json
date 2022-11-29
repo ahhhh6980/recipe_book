@@ -1,241 +1,218 @@
 {
-    "@context": "http://schema.org",
-    "@type": [
-        "Recipe",
-        "NewsArticle"
-    ],
-    "headline": "Instant Pot Turkey Breast and Gravy",
-    "datePublished": "2021-10-27T16:59:45.242-04:00",
-    "dateModified": "2022-02-14T17:37:22.005-05:00",
-    "author": [
-        {
-            "@type": "Person",
-            "name": "Coco Morante",
-            "description": "Coco began developing recipes for Simply Recipes in 2016 and is the author of five cookbooks. She is an industry expert on Instant Pot cooking.",
-            "url": "https://www.simplyrecipes.com/coco-morante-5091788",
-            "sameAs": [
-                "https://www.facebook.com/instantpotrecipes",
-                "https://www.instagram.com/cocomorante"
-            ],
-            "knowsAbout": [
-                "Kitchen gadgets: Instant Pot, air fryer"
-            ]
-        }
-    ],
-    "description": "Making turkey breast and gravy in the Instant Pot is a lot faster than roasting a whole bird in the oven, dirties fewer dishes, and works great for a small gathering!",
-    "image": {
-        "@type": "ImageObject",
-        "url": "https://www.simplyrecipes.com/thmb/H4fzpp4NfhXf4H5jcy8xPtRw4O0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-LEAD-03-4428362f9b474ffc8bdcfecc61b239fc.jpg",
-        "height": 1000,
-        "width": 1500
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "Simply Recipes",
-        "url": "https://www.simplyrecipes.com",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.simplyrecipes.com/thmb/QvixEwCD02s_lnkgkVb6mHwKS7c=/1125x320/filters:no_upscale():max_bytes(150000):strip_icc()/SimplyRecipesLogoTransparent-07a297c54b2142ae9c079abb2f0fa639.png",
-            "width": 1125,
-            "height": 320
-        },
-        "brand": "Simply Recipes",
-        "publishingPrinciples": "https://www.simplyrecipes.com/about-us-5096129#toc-editorial-guidelines",
-        "sameAs": [
-            "https://www.facebook.com/simplyrecipes",
-            "https://www.instagram.com/simplyrecipes",
-            "https://www.pinterest.com/simplyrecipes"
-        ]
-    },
-    "name": "Instant Pot Turkey Breast and Gravy",
-    "cookTime": "PT75M",
-    "keywords": "turkey, gravy, turkey breast, paprika, garlic, onion, fresh herbs, chicken broth, flour, instant pot turkey breast",
-    "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "531 kcal",
-        "carbohydrateContent": "7 g",
-        "cholesterolContent": "249 mg",
-        "fiberContent": "1 g",
-        "proteinContent": "94 g",
-        "saturatedFatContent": "4 g",
-        "sodiumContent": "641 mg",
-        "sugarContent": "2 g",
-        "fatContent": "12 g",
-        "unsaturatedFatContent": "0 g"
-    },
-    "prepTime": "PT10M",
-    "recipeCategory": [
-        "Dinner",
-        "Entree"
-    ],
-    "recipeCuisine": [
-        "American"
-    ],
-    "recipeIngredient": [
-        "1 1/2 tablespoons unsalted butter at room temperature",
-        "1 1/2 teaspoons kosher salt",
-        "1/2 teaspoon freshly ground black pepper",
-        "1 teaspoon paprika",
-        "4 teaspoons combination chopped fresh sage, rosemary, oregano, or thyme, divided",
-        "1 skin-on, bone-in whole or split turkey breast (4 1/2 pounds or smaller), thawed",
-        "1 tablespoon olive oil",
-        "2 medium yellow onions, cut into 1/4-inch slices",
-        "4 cloves garlic, peeled",
-        "2 cups low-sodium chicken broth",
-        "2 tablespoons all-purpose flour"
-    ],
-    "recipeInstructions": [
-        {
-            "@type": "HowToStep",
-            "image": [
-                {
-                    "@type": "ImageObject",
-                    "url": "https://www.simplyrecipes.com/thmb/x4mp_Vn0QLe2mST0j45gy7eTgqA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-03-5fe24d99aecc4ab1b98717f1d04f8625.jpg"
-                }
-            ],
-            "text": "Make the turkey seasoning: In a small bowl, stir the butter, salt, black pepper, paprika, and 3 teaspoons of chopped herbs."
-        },
-        {
-            "@type": "HowToStep",
-            "image": [
-                {
-                    "@type": "ImageObject",
-                    "url": "https://www.simplyrecipes.com/thmb/tC3gNjdnrNwA0zOnzpJnSXwLoeI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-04-1793bebf2e8d48d4af6fb1a91b54bb38.jpg"
-                }
-            ],
-            "text": "Trim and season the turkey: If needed, place the turkey breast on a cutting board and using a sharp knife trim the turkey breast of any excess neck bone, rib bones that go beyond the breasts, or extra skin. Pat the turkey breast dry with paper towels. Use your fingers to rub the butter mixture all over the turkey breast."
-        },
-        {
-            "@type": "HowToStep",
-            "image": [
-                {
-                    "@type": "ImageObject",
-                    "url": "https://www.simplyrecipes.com/thmb/N7CafwHvxM4Lh2Thugb6N-h7k1E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-07-d901de8071e34f32a5c79ef2a9b85767.jpg"
-                }
-            ],
-            "text": "Cook the onions and garlic: Select the Sauté setting on the Instant Pot and add the olive oil. When the olive oil is hot (after about 2 minutes), add the onions and garlic. Sauté until the onions are softened and browned, about 8 minutes."
-        },
-        {
-            "@type": "HowToStep",
-            "image": [
-                {
-                    "@type": "ImageObject",
-                    "url": "https://www.simplyrecipes.com/thmb/D7zFqxroGGW83ygN4VTBOc08_fE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-09-14ccb56810584646bf3e1b86c31802e5.jpg"
-                }
-            ],
-            "text": "Add the broth: Stir in the chicken broth and the remaining 1 teaspoon of the chopped herbs. Use a wooden spoon to scrape up any browned bits from the bottom of the pot."
-        },
-        {
-            "@type": "HowToStep",
-            "image": [
-                {
-                    "@type": "ImageObject",
-                    "url": "https://www.simplyrecipes.com/thmb/j6ha4miHR9wzx7Ze7iq2c6DcQeM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-11-5424d203302b406f9dc98e9206e0ff2c.jpg"
-                }
-            ],
-            "text": "Transfer turkey breasts into Instant Pot: Place a steam wire rack in the Instant Pot on top of the onions and garlic. Make sure the two handles are facing upwards. This will help you pull it out after the turkey cooks. Place the turkey breast on the steam wire rack."
-        },
-        {
-            "@type": "HowToStep",
-            "text": "Cook the turkey breast: Secure the lid on the Instant Pot and make sure the vent on the lid is turned to sealing, not venting. Select the Pressure Cook or Manual setting and set the cooking time to 35 minutes at high pressure. The Instant Pot will take about 15 minutes to come up to pressure before the cooking program begins."
-        },
-        {
-            "@type": "HowToStep",
-            "image": [
-                {
-                    "@type": "ImageObject",
-                    "url": "https://www.simplyrecipes.com/thmb/AzS1AAS4fDI6zxGyndMQOyPW9rM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-13-ec71930674eb4b72a293cbdd1c908d44.jpg"
-                }
-            ],
-            "text": "Release the pressure: When the cooking program ends, carefully (the steam will be very hot, so use heat-resistant oven mitts or use a kitchen towel) release the pressure in the pot by moving the vent on the lid from sealing to venting. When the pressure has fully released (you will stop hearing a hissing sound, and the float valve will sink down), open the Instant Pot. Press the Cancel button to reset the cooking program."
-        },
-        {
-            "@type": "HowToStep",
-            "image": [
-                {
-                    "@type": "ImageObject",
-                    "url": "https://www.simplyrecipes.com/thmb/CZpSSudHlatYKN2O0f9UQ8-G8bg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-14-1b00f6c6e5374d2e9101a1a245c097bf.jpg"
-                }
-            ],
-            "text": "Check for doneness: Use a meat thermometer to take the temperature of the turkey breast at its thickest part. It should be at least 165ºF. If the temperature is below 165ºF, secure the lid back on and cook the turkey on the Manual setting at high pressure for another 5 minutes."
-        },
-        {
-            "@type": "HowToStep",
-            "image": [
-                {
-                    "@type": "ImageObject",
-                    "url": "https://www.simplyrecipes.com/thmb/II0pz_7A2fx9-NNFkA45z2ZVzCs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-16-b285ca4d41b34e16a5788a98374920aa.jpg"
-                }
-            ],
-            "text": "Crisp the skin: Using and Air Fryer lid: If you have an air fryer lid for your Instant Pot, place it on top. On the Broil setting, set it to 400ºF and 10 minutes. When the broiling program ends, press the Cancel button to reset it. Using the oven: If you don’t have an air fryer lid, set the oven to broil on high. The oven rack should be set so that the turkey breast is 6 to 8 inches from the heating element, but it should also be low enough to fit the pot insert. Transfer the Instant Pot’s stainless steel inner pot with the turkey breast into the oven. Broil for about 5 minutes, or until the skin is browned, checking often to make sure that it has not burned."
-        },
-        {
-            "@type": "HowToStep",
-            "image": [
-                {
-                    "@type": "ImageObject",
-                    "url": "https://www.simplyrecipes.com/thmb/ygd5JKNqGsiefHxeOoJIdYFIHec=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-17-3f812a2024154b30b6d347f978195ecb.jpg"
-                }
-            ],
-            "text": "Remove the turkey from the Instant Pot: Whether you transferred the stainless steel inner pot to the oven or used the air fryer lid on the Instant Pot to crisp the skin, it’s time to remove the turkey and the wire steaming rack from the pot. Wearing heat-resistant oven mitts, grasp the handles of the wire rack and lift the turkey out of the pot. Transfer it to a serving platter or carving board to rest while you finish making the gravy. If you broiled the turkey in the oven, return the stainless steel inner pot into the Instant Pot."
-        },
-        {
-            "@type": "HowToStep",
-            "image": [
-                {
-                    "@type": "ImageObject",
-                    "url": "https://www.simplyrecipes.com/thmb/5mI1RK-CAux_TPrdC9BEd-hNOI0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-22-b9db9a6a5bda489c8ffe86b9e38c42d9.jpg"
-                }
-            ],
-            "text": "Make the gravy: Sprinkle the flour over the onions and cooking liquid. Use an immersion blender to blend the mixture until smooth. If you don’t have an immersion blender, carefully transfer the mixture into a blender to blend until smooth, then transfer it back into the pot. Select the sauté setting on the Instant Pot. Let the gravy simmer for a minute or two until thickened. Turn off the pot."
-        },
-        {
-            "@type": "HowToStep",
-            "image": [
-                {
-                    "@type": "ImageObject",
-                    "url": "https://www.simplyrecipes.com/thmb/xQe68s4U1_bF0UvUztdm0ZtlZeI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-LEAD-09-c78eae5ee5ba4324bd44971141576b10.jpg"
-                }
-            ],
-            "text": "Carve and serve: Use a sharp knife to carve the turkey breast off the rib bones. Carve the meat into 1/2-inch slices and serve with the gravy ladled on top."
-        }
-    ],
-    "recipeYield": "6",
-    "totalTime": "PT85M",
-    "mainEntityOfPage": {
-        "@type": [
-            "WebPage"
-        ],
-        "@id": "https://www.simplyrecipes.com/instant-pot-turkey-breast-and-gravy-recipe-5207290",
-        "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "item": {
-                        "@id": "https://www.simplyrecipes.com/thanksgiving-recipes-5091305",
-                        "name": "Thanksgiving"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "item": {
-                        "@id": "https://www.simplyrecipes.com/thanksgiving-turkey-recipes-5091300",
-                        "name": "Thanksgiving Turkeys"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "item": {
-                        "@id": "https://www.simplyrecipes.com/instant-pot-turkey-breast-and-gravy-recipe-5207290",
-                        "name": "Instant Pot Turkey Breast and Gravy"
-                    }
-                }
-            ]
-        }
-    },
-    "about": []
+"@context": "http://schema.org",
+"@type": ["Recipe","NewsArticle"]
+,"headline": "Instant Pot Turkey Breast and Gravy"
+,"datePublished": "2021-10-27T16:59:45.242-04:00"
+,"dateModified": "2022-02-14T17:37:22.005-05:00"
+,"author": [
+{"@type": "Person"
+,"name": "Coco Morante"
+,"description": "Coco began developing recipes for Simply Recipes in 2016 and is the author of five cookbooks. She is an industry expert on Instant Pot cooking."
+,"url": "https://www.simplyrecipes.com/coco-morante-5091788"
+,"sameAs": [
+"https://www.facebook.com/instantpotrecipes",
+"https://www.instagram.com/cocomorante"
+]
+,"knowsAbout": ["Kitchen gadgets: Instant Pot, air fryer"]
+}
+]
+,"description": "Making turkey breast and gravy in the Instant Pot is a lot faster than roasting a whole bird in the oven, dirties fewer dishes, and works great for a small gathering!"
+,"image": {
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/H4fzpp4NfhXf4H5jcy8xPtRw4O0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-LEAD-03-4428362f9b474ffc8bdcfecc61b239fc.jpg",
+"height": 1000,
+"width": 1500
+}
+,"publisher": {
+"@type": "Organization",
+"name": "Simply Recipes",
+"url": "https://www.simplyrecipes.com",
+"logo": {
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/QvixEwCD02s_lnkgkVb6mHwKS7c=/1125x320/filters:no_upscale():max_bytes(150000):strip_icc()/SimplyRecipesLogoTransparent-07a297c54b2142ae9c079abb2f0fa639.png",
+"width": 1125,
+"height": 320
+},
+"brand": "Simply Recipes"
+, "publishingPrinciples": "https://www.simplyrecipes.com/about-us-5096129#toc-editorial-guidelines"
+, "sameAs" : [
+"https://www.facebook.com/simplyrecipes",
+"https://www.instagram.com/simplyrecipes",
+"https://www.pinterest.com/simplyrecipes"
+]
+}
+,"name": "Instant Pot Turkey Breast and Gravy"
+,"cookTime": "PT75M"
+,"keywords": "turkey, gravy, turkey breast, paprika, garlic, onion, fresh herbs, chicken broth, flour, instant pot turkey breast"
+,"nutrition": {
+"@type": "NutritionInformation"
+,"calories": "531 kcal"
+,"carbohydrateContent": "7 g"
+,"cholesterolContent": "249 mg"
+,"fiberContent": "1 g"
+,"proteinContent": "94 g"
+,"saturatedFatContent": "4 g"
+,"sodiumContent": "641 mg"
+,"sugarContent": "2 g"
+,"fatContent": "12 g"
+,"unsaturatedFatContent": "0 g"
+}
+,"prepTime": "PT10M"
+, "recipeCategory": ["Dinner","Entree"]
+,"recipeCuisine": ["American"]
+,"recipeIngredient": [
+"1 1/2 tablespoons unsalted butter at room temperature",
+"1 1/2 teaspoons kosher salt",
+"1/2 teaspoon freshly ground black pepper",
+"1 teaspoon paprika",
+"4 teaspoons combination chopped fresh sage, rosemary, oregano, or thyme, divided",
+"1 skin-on, bone-in whole or split turkey breast (4 1/2 pounds or smaller), thawed",
+"1 tablespoon olive oil",
+"2 medium yellow onions, cut into 1/4-inch slices",
+"4 cloves garlic, peeled",
+"2 cups low-sodium chicken broth",
+"2 tablespoons all-purpose flour" ]
+,"recipeInstructions": [
+{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/x4mp_Vn0QLe2mST0j45gy7eTgqA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-03-5fe24d99aecc4ab1b98717f1d04f8625.jpg"
+}
+]
+,"text": "Make the turkey seasoning: In a small bowl, stir the butter, salt, black pepper, paprika, and 3 teaspoons of chopped herbs."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/tC3gNjdnrNwA0zOnzpJnSXwLoeI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-04-1793bebf2e8d48d4af6fb1a91b54bb38.jpg"
+}
+]
+,"text": "Trim and season the turkey: If needed, place the turkey breast on a cutting board and using a sharp knife trim the turkey breast of any excess neck bone, rib bones that go beyond the breasts, or extra skin. Pat the turkey breast dry with paper towels. Use your fingers to rub the butter mixture all over the turkey breast."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/N7CafwHvxM4Lh2Thugb6N-h7k1E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-07-d901de8071e34f32a5c79ef2a9b85767.jpg"
+}
+]
+,"text": "Cook the onions and garlic: Select the Sauté setting on the Instant Pot and add the olive oil. When the olive oil is hot (after about 2 minutes), add the onions and garlic. Sauté until the onions are softened and browned, about 8 minutes."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/D7zFqxroGGW83ygN4VTBOc08_fE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-09-14ccb56810584646bf3e1b86c31802e5.jpg"
+}
+]
+,"text": "Add the broth: Stir in the chicken broth and the remaining 1 teaspoon of the chopped herbs. Use a wooden spoon to scrape up any browned bits from the bottom of the pot."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/j6ha4miHR9wzx7Ze7iq2c6DcQeM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-11-5424d203302b406f9dc98e9206e0ff2c.jpg"
+}
+]
+,"text": "Transfer turkey breasts into Instant Pot: Place a steam wire rack in the Instant Pot on top of the onions and garlic. Make sure the two handles are facing upwards. This will help you pull it out after the turkey cooks. Place the turkey breast on the steam wire rack."
+} ,{
+"@type": "HowToStep"
+,"text": "Cook the turkey breast: Secure the lid on the Instant Pot and make sure the vent on the lid is turned to sealing, not venting. Select the Pressure Cook or Manual setting and set the cooking time to 35 minutes at high pressure. The Instant Pot will take about 15 minutes to come up to pressure before the cooking program begins."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/AzS1AAS4fDI6zxGyndMQOyPW9rM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-13-ec71930674eb4b72a293cbdd1c908d44.jpg"
+}
+]
+,"text": "Release the pressure: When the cooking program ends, carefully (the steam will be very hot, so use heat-resistant oven mitts or use a kitchen towel) release the pressure in the pot by moving the vent on the lid from sealing to venting. When the pressure has fully released (you will stop hearing a hissing sound, and the float valve will sink down), open the Instant Pot. Press the Cancel button to reset the cooking program."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/CZpSSudHlatYKN2O0f9UQ8-G8bg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-14-1b00f6c6e5374d2e9101a1a245c097bf.jpg"
+}
+]
+,"text": "Check for doneness: Use a meat thermometer to take the temperature of the turkey breast at its thickest part. It should be at least 165ºF. If the temperature is below 165ºF, secure the lid back on and cook the turkey on the Manual setting at high pressure for another 5 minutes."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/II0pz_7A2fx9-NNFkA45z2ZVzCs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-16-b285ca4d41b34e16a5788a98374920aa.jpg"
+}
+]
+,"text": "Crisp the skin: Using and Air Fryer lid: If you have an air fryer lid for your Instant Pot, place it on top. On the Broil setting, set it to 400ºF and 10 minutes. When the broiling program ends, press the Cancel button to reset it. Using the oven: If you don’t have an air fryer lid, set the oven to broil on high. The oven rack should be set so that the turkey breast is 6 to 8 inches from the heating element, but it should also be low enough to fit the pot insert. Transfer the Instant Pot’s stainless steel inner pot with the turkey breast into the oven. Broil for about 5 minutes, or until the skin is browned, checking often to make sure that it has not burned."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/ygd5JKNqGsiefHxeOoJIdYFIHec=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-17-3f812a2024154b30b6d347f978195ecb.jpg"
+}
+]
+,"text": "Remove the turkey from the Instant Pot: Whether you transferred the stainless steel inner pot to the oven or used the air fryer lid on the Instant Pot to crisp the skin, it’s time to remove the turkey and the wire steaming rack from the pot. Wearing heat-resistant oven mitts, grasp the handles of the wire rack and lift the turkey out of the pot. Transfer it to a serving platter or carving board to rest while you finish making the gravy. If you broiled the turkey in the oven, return the stainless steel inner pot into the Instant Pot."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/5mI1RK-CAux_TPrdC9BEd-hNOI0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-METHOD-22-b9db9a6a5bda489c8ffe86b9e38c42d9.jpg"
+}
+]
+,"text": "Make the gravy: Sprinkle the flour over the onions and cooking liquid. Use an immersion blender to blend the mixture until smooth. If you don’t have an immersion blender, carefully transfer the mixture into a blender to blend until smooth, then transfer it back into the pot. Select the sauté setting on the Instant Pot. Let the gravy simmer for a minute or two until thickened. Turn off the pot."
+} ,{
+"@type": "HowToStep"
+,"image": [
+{
+"@type": "ImageObject",
+"url": "https://www.simplyrecipes.com/thmb/xQe68s4U1_bF0UvUztdm0ZtlZeI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Instant-Pot-Turkey-Breast-LEAD-09-c78eae5ee5ba4324bd44971141576b10.jpg"
+}
+]
+,"text": "Carve and serve: Use a sharp knife to carve the turkey breast off the rib bones. Carve the meat into 1/2-inch slices and serve with the gravy ladled on top."
+} ]
+,"recipeYield": "6"
+,"totalTime": "PT85M"
+,"mainEntityOfPage": {
+"@type": ["WebPage"]
+,"@id": "https://www.simplyrecipes.com/instant-pot-turkey-breast-and-gravy-recipe-5207290"
+,"breadcrumb": {
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"item": {
+"@id": "https://www.simplyrecipes.com/thanksgiving-recipes-5091305",
+"name": "Thanksgiving"
+}
+}
+,
+{
+"@type": "ListItem",
+"position": 2,
+"item": {
+"@id": "https://www.simplyrecipes.com/thanksgiving-turkey-recipes-5091300",
+"name": "Thanksgiving Turkeys"
+}
+}
+,
+{
+"@type": "ListItem",
+"position": 3,
+"item": {
+"@id": "https://www.simplyrecipes.com/instant-pot-turkey-breast-and-gravy-recipe-5207290",
+"name": "Instant Pot Turkey Breast and Gravy"
+}
+}
+]
+}
+}
+, "about": [
+]
 }

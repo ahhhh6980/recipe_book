@@ -180,7 +180,7 @@ impl Display for MixedRational {
             (true, true) => write!(f, "{} {}/{}", self.value, self.num, self.den),
             (true, false) => write!(f, "{}/{}", self.num, self.den),
             (false, true) => write!(f, "{}", self.value),
-            (false, false) => write!(f, "{:?}", self),
+            (false, false) => write!(f, ""),
         }
     }
 }

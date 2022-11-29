@@ -1,1 +1,84 @@
-{"grabbed_json_history":[],"skipped":[{"time":"2022-11-27 22:39:09.939522084 +00:00:00","url":"https://www.eatwell101.com/garlic-butter-chicken-bites-asparagus-recipe","name":"https://www.eatwell101.com/garlic-butter-chicken-bites-asparagus-recipe","processed":false},{"time":"2022-11-27 22:39:10.261886409 +00:00:00","url":"https://www.ethanchlebowski.com/cooking-techniques-recipes/homemade-in-n-out-double-double-amp-animal-style-fries","name":"https://www.ethanchlebowski.com/cooking-techniques-recipes/homemade-in-n-out-double-double-amp-animal-style-fries","processed":false}]}
+{
+    "grabbed_json_history": [
+        {
+            "time": "2022-11-29 17:08:14.336173526 +00:00:00",
+            "url": "https://www.spendwithpennies.com/homemade-carrot-bread//",
+            "name": "Homemade Carrot Bread",
+            "processed": false
+        },
+        {
+            "time": "2022-11-29 17:08:14.96158549 +00:00:00",
+            "url": "https://amandascookin.com/million-dollar-chicken-casserole/",
+            "name": "Million Dollar Chicken Casserole",
+            "processed": false
+        },
+        {
+            "time": "2022-11-29 17:08:15.368185865 +00:00:00",
+            "url": "https://www.simplyrecipes.com/instant-pot-turkey-breast-and-gravy-recipe-5207290",
+            "name": "Instant Pot Turkey Breast and Gravy",
+            "processed": false
+        },
+        {
+            "time": "2022-11-29 17:08:15.891961528 +00:00:00",
+            "url": "https://www.epicurious.com/recipes/food/views/hash-brown-casserole",
+            "name": "Cheesy Hash Brown Casserole",
+            "processed": false
+        },
+        {
+            "time": "2022-11-29 17:08:16.125163482 +00:00:00",
+            "url": "https://www.averiecooks.com/garlic-butter-chicken/",
+            "name": "Garlic Butter Chicken",
+            "processed": false
+        },
+        {
+            "time": "2022-11-29 17:08:16.445765287 +00:00:00",
+            "url": "https://themodernproper.com/lemon-chicken",
+            "name": "Easy Lemon Chicken Recipe",
+            "processed": false
+        },
+        {
+            "time": "2022-11-29 17:08:16.68006438 +00:00:00",
+            "url": "https://cafedelites.com/quick-easy-creamy-herb-chicken/",
+            "name": "Creamy Herb Chicken",
+            "processed": false
+        },
+        {
+            "time": "2022-11-29 17:08:16.921948914 +00:00:00",
+            "url": "https://www.aheadofthyme.com/roasted-spatchcock-chicken-butterflied-chicken/",
+            "name": "Roasted Spatchcock Chicken (Butterflied Chicken)",
+            "processed": false
+        },
+        {
+            "time": "2022-11-29 17:08:17.506516987 +00:00:00",
+            "url": "https://www.foodiecrush.com/thai-chicken-cucumber-salad/",
+            "name": "Thai Chicken and Cucumber Salad",
+            "processed": false
+        },
+        {
+            "time": "2022-11-29 17:08:17.768966422 +00:00:00",
+            "url": "https://littlesunnykitchen.com/marry-me-chicken/",
+            "name": "Marry Me Chicken",
+            "processed": false
+        },
+        {
+            "time": "2022-11-29 17:08:18.943992292 +00:00:00",
+            "url": "https://www.simplyrecipes.com/recipes/smothered_turkey_wings/",
+            "name": "Smothered Turkey Wings",
+            "processed": false
+        }
+    ],
+    "skipped": [
+        {
+            "time": "2022-11-29 17:08:18.157584707 +00:00:00",
+            "url": "https://www.eatwell101.com/garlic-butter-chicken-bites-asparagus-recipe",
+            "name": "https://www.eatwell101.com/garlic-butter-chicken-bites-asparagus-recipe",
+            "processed": false
+        },
+        {
+            "time": "2022-11-29 17:08:18.557754285 +00:00:00",
+            "url": "https://www.ethanchlebowski.com/cooking-techniques-recipes/homemade-in-n-out-double-double-amp-animal-style-fries",
+            "name": "https://www.ethanchlebowski.com/cooking-techniques-recipes/homemade-in-n-out-double-double-amp-animal-style-fries",
+            "processed": false
+        }
+    ]
+}

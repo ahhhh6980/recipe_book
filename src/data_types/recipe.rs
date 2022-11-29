@@ -4,15 +4,30 @@ use serde_json::Value;
 use crate::{mixed_rational::MixedRational, Measure, MeasureType, Unit};
 use std::fmt;
 
+fn none<T>(s: &Option<T>) -> bool {
+    s.is_none()
+}
+
+fn default_option<T>() -> Option<T> {
+    None
+}
 #[derive(Debug, Clone, Default, serde::Serialize, serde::Deserialize)]
 pub struct RecipeItem {
     #[serde(flatten)]
     pub measure: MeasureType,
+    #[serde(skip_serializing_if = "none", default = "default_option")]
     pub measure_b: Option<MeasureType>,
     #[serde(serialize_with = "crate::proper_string_serialize")]
     pub name: String,
+    #[serde(skip_serializing_if = "none", default = "default_option")]
     pub note: Option<String>,
     pub plural: bool,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize, serde::Deserialize)]
+pub struct DirectionSection {
+    pub name: String,
+    pub sections: Vec<String>,
 }
 
 #[derive(Clone, Default, Debug, serde::Serialize, serde::Deserialize)]
@@ -29,7 +44,7 @@ pub struct RecipeData {
     pub original_servings: Option<MixedRational>,
     pub servings: MixedRational,
     pub ingredients: Vec<RecipeItem>,
-    pub directions: Vec<String>,
+    pub directions: Vec<DirectionSection>,
     pub nutrition_info: NutritionInfo,
 }
 
@@ -183,8 +198,11 @@ impl std::fmt::Display for ParsedRecipe {
         string.push('\n');
         string.push_str("Directions: \n");
         let c = self.data.directions.len().to_string().len() + 2;
-        for (i, direction) in self.data.directions.iter().enumerate() {
-            string.push_str(&format!("{: >n$}) {}\n", i, direction, n = c));
+        for section in self.data.directions.iter() {
+            string.push_str(&format!("{} {}\n", " ".repeat(c - 2), section.name));
+            for (i, direction) in section.sections.iter().enumerate() {
+                string.push_str(&format!("{: >n$}) {}\n", i, direction, n = c * 2));
+            }
         }
 
         string.push_str("\nServing Size: ");
@@ -270,7 +288,6 @@ impl From<(String, serde_json::Value)> for ParsedRecipe {
         for mut ingredient_str in ingredients_txt {
             // Remove duplicate spaces and parenthesis
             ingredient_str = remove_duplicate_chars(ingredient_str.trim(), &[' ', '(', ')']);
-            println!("unfiltered text: {}", ingredient_str);
             // Find where parenthesis are
             let parens = (ingredient_str.find('('), ingredient_str.find(')'));
             // Assemble a note if there are parenthesis
@@ -291,7 +308,6 @@ impl From<(String, serde_json::Value)> for ParsedRecipe {
             if ingredient_str == "null" {
                 continue;
             }
-            println!("filtered text: {}", ingredient_str);
             /*
                 If the first few characters are not part of a rational, we dont need extra processing
             */
@@ -383,9 +399,7 @@ impl From<(String, serde_json::Value)> for ParsedRecipe {
                     plural: unit_str.ends_with("'s") || unit_str.ends_with('s'),
                 }
             };
-            println!("P: {}", ingredient);
             ingredients.push(ingredient);
-            println!()
             //let range = ingredient.find('-');
         }
         let mut nutrition_info = Vec::new();
@@ -405,7 +419,7 @@ impl From<(String, serde_json::Value)> for ParsedRecipe {
         ]
         .iter()
         {
-            let val = value["nutrition"][field].to_string();
+            let val = value["nutrition"][field].to_string().replace('"', "");
             if let Some(space) = val.find(' ') {
                 let (whole, unit) = val.split_at(space);
                 if let Ok(v) = whole.replace(|c: char| !c.is_numeric(), "").parse::<i32>() {
@@ -429,54 +443,187 @@ impl From<(String, serde_json::Value)> for ParsedRecipe {
             servings_unit: "".into(),
             nutrients: nutrition_info,
         };
-        new.data.directions = if let Some(directions) = value["recipeInstructions"].as_array() {
-            directions.iter().map(|v| v["text"].to_string()).collect()
+        //HowToSection
+        let mut section = DirectionSection::default();
+        let mut directions = Vec::new();
+        if let Some(d_array) = value["recipeInstructions"].as_array() {
+            for item in d_array {
+                match item["@type"].as_str() {
+                    Some("HowToSection") => {
+                        if let Some(s_array) = item["itemListElement"].as_array() {
+                            if !section.sections.is_empty() {
+                                directions.push(section);
+                            }
+                            section = DirectionSection::default();
+                            section.name = item["name"].to_string().replace('"', "");
+                            for d in s_array {
+                                section
+                                    .sections
+                                    .push(d["text"].to_string().replace('"', ""))
+                            }
+                        }
+                    }
+                    Some("HowToStep") => {
+                        let mut s = item["text"].to_string().replace('"', "");
+                        let mut new_section = DirectionSection::default();
+                        let mut i = 0;
+                        if s.contains(':') {
+                            while s.len() > 2 && i < 256 {
+                                if let Some(mut colon) = s.find(':') {
+                                    if let Some(end) = s[colon + 1..].find(". ") {
+                                        if end < colon {
+                                            new_section
+                                                .sections
+                                                .push(s[..end].to_string().replace('"', ""));
+                                            s = s[end + 2..].into();
+                                            continue;
+                                        }
+                                        if let Some(next_colon) = s[colon + 1..].find(':') {
+                                            if end > next_colon {
+                                                colon = colon + 1 + next_colon;
+                                            }
+                                        }
+                                    }
+                                    if !new_section.sections.is_empty() {
+                                        directions.push(new_section);
+                                    }
+                                    new_section = DirectionSection::default();
+                                    new_section.name = s[..colon].to_string().replace('"', "");
+                                    s = s[colon + 1..].into();
+                                } else if let Some(end) = s.find(". ") {
+                                    new_section
+                                        .sections
+                                        .push(s[..end].to_string().replace('"', ""));
+                                    s = s[end + 2..].into();
+                                }
+                                i += 1;
+                            }
+                            new_section.sections.push(s);
+                            directions.push(new_section);
+                        } else if let Some(semi) = s.find(';') {
+                            if s.split_at(semi).0.replace(|c: char| c != ' ', "").len()
+                                < s.split_at(semi).1.replace(|c: char| c != ' ', "").len()
+                            {
+                                while s.len() > 2 && i < 256 {
+                                    if let Some(semicolon) = s.find(';') {
+                                        if !new_section.sections.is_empty() {
+                                            directions.push(new_section);
+                                        }
+                                        new_section = DirectionSection::default();
+                                        new_section.name =
+                                            s[..semicolon].to_string().replace('"', "");
+
+                                        s = s[semicolon + 1..].into();
+                                    } else if let Some(end) = s.find(". ") {
+                                        new_section
+                                            .sections
+                                            .push(s[..end].to_string().replace('"', ""));
+                                        s = s[end + 2..].into();
+                                    }
+                                    i += 1;
+                                }
+
+                                if new_section.sections.is_empty() {
+                                    section.sections.push(s);
+                                } else {
+                                    directions.push(new_section);
+                                }
+                            } else {
+                                directions.push(new_section);
+                            }
+                        } else {
+                            section.sections.push(s);
+                        }
+                    }
+                    _ => {}
+                }
+            }
+        }
+        if !section.sections.is_empty() {
+            directions.push(section);
+        }
+        /*
+        for direction in directions {
+            if direction.len() > 90 {
+                if direction.contains(". ") {
+                    for d in direction.split(". ") {
+                        if !d.is_empty() {
+                            new.data.directions.push(d.into());
+                        }
+                    }
+                } else {
+                    new.data.directions.push(direction);
+                }
+            } else {
+                new.data.directions.push(direction);
+            }
+        } */
+        new.data.directions = directions;
+
+        new.text.author_name = if let Some(arr) = value["author"].as_array() {
+            arr[0]["name"].to_string()
         } else {
-            Vec::new()
+            value["author"]["name"].to_string()
         };
-        new.text.author_name = value["author"]["name"].to_string();
+
         new.text.description = value["description"].to_string();
         new.text.title = value["name"].to_string();
         new.text.origin = url;
-        println!("{}", new);
-        /*
-        "recipeYield": [
-                        "16",
-                        "16 slices"
-                    ],
-        */
-        /*
-            "keywords": [
-            "breakfast",
-            "butter",
-            "onion",
-            "cream",
-            "sour cream",
-            "pepper",
-            "garlic",
-            "cheddar",
-            "side",
-            "potato",
-            "brunch",
-            "dinner",
-            "thanksgiving",
-            "easter",
-            "christmas",
-            "web"
-        ],
-            */
+        if let Some(ryield) = value["recipeYield"].as_array() {
+            let s = ryield[0].to_string();
+            new.data.servings = MixedRational::from_string(s).0;
+        } else {
+            let s = value["recipeYield"].to_string();
+            if !s.is_empty() {
+                new.data.servings = MixedRational::from_string(s).0;
+            }
+        }
 
-        //"cookTime": "25 minutes",
-        /*
+        new.keywords = value["keywords"]
+            .as_array()
+            .map_or(Vec::new(), |m| m.iter().map(|v| v.to_string()).collect());
+
+        new.text.prep_time = if let Some(time) = [
+            value["totalTime"].to_string(),
+            value["performTime"].to_string(),
+            value["cookTime"].to_string(),
+            value["prepTime"].to_string(),
+        ]
+        .iter()
+        .find(|s| !s.contains("null"))
         {
-                "name": "Calories",
-                "count": {
-                    "value": 242
-                },
-                "unit": "kcal",
-                "plural": true
-            },
-        */
+            let mut t = time.replace('"', "");
+            if t.contains("PT") {
+                let stime = t.replace(|c: char| !c.is_numeric(), "");
+                if let Ok(minutes) = stime.parse::<usize>() {
+                    let (h, m) = (minutes / 60, minutes % 60);
+                    t = format!(
+                        "{} {}",
+                        match h {
+                            0 => "".into(),
+                            1 => format!("{} hour", h),
+                            _ => format!("{} hours", h),
+                        },
+                        match m {
+                            0 => "".into(),
+                            1 => format!("{} minute", m),
+                            _ => format!("{} minutes", m),
+                        },
+                    );
+                }
+            }
+            t
+        } else {
+            "".into()
+        };
+
+        std::fs::write(
+            format!("recipes/wip/{}.json", new.text.title.replace('"', "")),
+            serde_json::to_string(&new).unwrap(),
+        )
+        .unwrap();
+
+        println!("{}", new);
         new
     }
 }

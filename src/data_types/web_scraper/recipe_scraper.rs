@@ -6,6 +6,7 @@ use serde::de::IntoDeserializer;
 pub struct Scraper {
     pub json: Vec<serde_json::Value>,
     pub un_parsed: Vec<(String, scraper::Html)>,
+    pub parsed: Vec<ParsedRecipe>,
 }
 
 #[derive(Clone, serde::Serialize, serde::Deserialize)]
@@ -107,7 +108,11 @@ impl Scraper {
                             txt.remove(txt.len() - 1);
                         }
                         // Remove escape characters
-                        txt = txt.replace(r#"\/"#, "/").replace(r#"\u00a0"#, " ");
+                        txt = txt
+                            .replace(r#"\/"#, "/")
+                            .replace(r#"\u00a0"#, " ")
+                            .replace("&#39;", "'")
+                            .replace("&#039;", "'");
                         let json: serde_json::Value = serde_json::from_str(&txt)?;
                         let graph = &json["@graph"];
                         if let Some(arr) = graph.as_array() {
@@ -130,13 +135,14 @@ impl Scraper {
                                     self.json.push(item.clone());
                                     found.push(i);
                                     foundf = true;
-                                    /*url_hist_obj.grabbed_json_history.push(UrlHistoryItem {
+                                    url_hist_obj.grabbed_json_history.push(UrlHistoryItem {
                                         time: get_time_string(),
                                         url: url.clone(),
                                         name: item["name"].to_string().replace('"', ""),
                                         processed: false,
-                                    });*/
-                                    let test = ParsedRecipe::from((url.clone(), item.clone()));
+                                    });
+                                    self.parsed
+                                        .push(ParsedRecipe::from((url.clone(), item.clone())));
                                 }
                             }
                         } else {
@@ -150,13 +156,15 @@ impl Scraper {
                             )?;
                             self.json.push(json.clone());
                             foundf = true;
-                            found.push(i); /*
-                                           url_hist_obj.grabbed_json_history.push(UrlHistoryItem {
-                                               time: get_time_string(),
-                                               url: url.clone(),
-                                               name: json["name"].to_string().replace('"', ""),
-                                               processed: false,
-                                           }); */
+                            found.push(i);
+                            url_hist_obj.grabbed_json_history.push(UrlHistoryItem {
+                                time: get_time_string(),
+                                url: url.clone(),
+                                name: json["name"].to_string().replace('"', ""),
+                                processed: false,
+                            });
+                            self.parsed
+                                .push(ParsedRecipe::from((url.clone(), json.clone())));
                         }
                         // Parse to JSON and push to structs list of JSON
 
